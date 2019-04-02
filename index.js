@@ -31,15 +31,6 @@ Object.defineProperty(exports, 'DynamicDimension', {
     }
 });
 
-var _OrgUnitDimension = require('./components/OrgUnitDimension/OrgUnitDimension');
-
-Object.defineProperty(exports, 'OrgUnitDimension', {
-    enumerable: true,
-    get: function get() {
-        return _interopRequireDefault(_OrgUnitDimension).default;
-    }
-});
-
 var _DimensionsPanel = require('./components/DimensionsPanel/DimensionsPanel');
 
 Object.defineProperty(exports, 'DimensionsPanel', {
