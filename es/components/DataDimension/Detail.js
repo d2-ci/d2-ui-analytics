@@ -6,9 +6,9 @@ import Select from '@material-ui/core/Select';
 import i18n from '@dhis2/d2-i18n';
 import { styles } from './styles/Details.style';
 export const Detail = ({
-  value,
-  onDetailChange,
-  detailAlternatives
+  value: value,
+  onDetailChange: onDetailChange,
+  detailAlternatives: detailAlternatives
 }) => React.createElement("div", {
   style: styles.detailContainer
 }, React.createElement(InputLabel, {

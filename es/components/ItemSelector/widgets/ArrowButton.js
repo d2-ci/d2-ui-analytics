@@ -13,8 +13,8 @@ var _ref2 =
 React.createElement(ArrowBack, null);
 
 export const ArrowButton = ({
-  onClick,
-  iconType
+  onClick: onClick,
+  iconType: iconType
 }) => React.createElement("button", {
   onClick: onClick,
   className: `jsx-${styles.__hash}` + " " + "arrow-button"

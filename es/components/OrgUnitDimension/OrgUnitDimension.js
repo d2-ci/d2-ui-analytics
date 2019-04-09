@@ -76,7 +76,7 @@ class OrgUnitDimension extends Component {
     _defineProperty(this, "loadOrgUnitTree", (d2, displayNameProperty) => {
       apiFetchOrganisationUnits(d2, displayNameProperty).then(rootLevel => rootLevel.toArray()[0]).then(root => {
         this.setState({
-          root
+          root: root
         });
       });
     });

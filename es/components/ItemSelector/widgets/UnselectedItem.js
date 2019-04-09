@@ -12,15 +12,15 @@ import { colors } from '../styles/colors';
 import styles from './styles/UnselectedItem.style';
 
 const onClickWrapper = ({
-  id,
-  index,
-  onClick
+  id: id,
+  index: index,
+  onClick: onClick
 }) => event => onClick(event.metaKey || event.ctrlKey, event.shiftKey, index, id);
 
 export const Item = (_ref) => {
   let {
-    name,
-    highlighted
+    name: name,
+    highlighted: highlighted
   } = _ref,
       rest = _objectWithoutProperties(_ref, ["name", "highlighted"]);
 

@@ -13,17 +13,17 @@ import { colors } from '../styles/colors';
 import styles from './styles/SelectedItem.style';
 
 const onClickWrapper = ({
-  id,
-  index,
-  onClick
+  id: id,
+  index: index,
+  onClick: onClick
 }) => event => onClick(event.metaKey || event.ctrlKey, event.shiftKey, index, id);
 
 export const Item = (_ref) => {
   let {
-    name,
-    highlighted,
-    ghost,
-    onRemoveItem
+    name: name,
+    highlighted: highlighted,
+    ghost: ghost,
+    onRemoveItem: onRemoveItem
   } = _ref,
       rest = _objectWithoutProperties(_ref, ["name", "highlighted", "ghost", "onRemoveItem"]);
 
@@ -32,7 +32,7 @@ export const Item = (_ref) => {
     "data-test": `dimension-item-${rest.id}`,
     className: `jsx-${styles.__hash}` + " " + (cx('item', {
       'highlighted-item': highlighted,
-      ghost,
+      ghost: ghost,
       'selected-item': !highlighted
     }) || "")
   }, React.createElement(ItemIcon, {

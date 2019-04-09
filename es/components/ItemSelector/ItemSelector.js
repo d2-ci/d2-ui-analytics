@@ -9,8 +9,8 @@ import styles from './styles/ItemSelector.style';
 class ItemSelector extends Component {
   render() {
     const {
-      unselected,
-      selected,
+      unselected: unselected,
+      selected: selected,
       children: filterZone
     } = this.props;
     return React.createElement("div", {

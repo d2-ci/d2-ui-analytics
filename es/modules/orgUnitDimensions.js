@@ -134,7 +134,7 @@ export const transformOptionsIntoMetadata = (options, metadata, fields = ['id', 
   }
 
   return {
-    options,
+    options: options,
     metadata: result
   };
 };

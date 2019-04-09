@@ -7,8 +7,8 @@ var _ref =
 React.createElement(MoreHorizontalIcon, null);
 
 export const OptionsButton = ({
-  style,
-  onClick
+  style: style,
+  onClick: onClick
 }) => React.createElement(IconButton, {
   style: style,
   onClick: onClick

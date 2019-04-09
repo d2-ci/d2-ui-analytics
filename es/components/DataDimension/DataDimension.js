@@ -54,7 +54,7 @@ export class DataDimension extends Component {
           [dataType]: dataTypeGroups
         });
         this.setState({
-          groups
+          groups: groups
         }, this.updateAlternatives);
       } else {
         this.updateAlternatives();
@@ -73,10 +73,10 @@ export class DataDimension extends Component {
         const groupId = currentFilter.groupId || defaultGroupId(dataType);
         const groupDetail = currentFilter.groupDetail || defaultGroupDetail(dataType);
         this.setState({
-          filter,
-          dataType,
-          groupId,
-          groupDetail,
+          filter: filter,
+          dataType: dataType,
+          groupId: groupId,
+          groupDetail: groupDetail,
           filterText: ''
         }, this.updateGroups);
       }
@@ -90,21 +90,21 @@ export class DataDimension extends Component {
 
     _defineProperty(this, "updateAlternatives", async (page = FIRST_PAGE, concatItems = false) => {
       const {
-        dataType,
-        groupId,
-        groupDetail,
-        filterText
+        dataType: dataType,
+        groupId: groupId,
+        groupDetail: groupDetail,
+        filterText: filterText
       } = this.state;
       let {
-        dimensionItems,
-        nextPage
+        dimensionItems: dimensionItems,
+        nextPage: nextPage
       } = (await apiFetchAlternatives({
         d2: this.props.d2,
-        dataType,
-        groupId,
-        groupDetail,
-        page,
-        filterText,
+        dataType: dataType,
+        groupId: groupId,
+        groupDetail: groupDetail,
+        page: page,
+        filterText: filterText,
         nameProp: this.props.displayNameProp
       })) || DEFAULT_ALTERNATIVES;
       const augmentFn = dataTypes[dataType].augmentAlternatives;
@@ -117,14 +117,14 @@ export class DataDimension extends Component {
       this.setState({
         items: items.filter(di => !this.props.selectedDimensions.includes(di.id)),
         itemsCopy: items,
-        nextPage
+        nextPage: nextPage
       });
     });
 
     _defineProperty(this, "onGroupChange", async groupId => {
       if (groupId !== this.state.groupId) {
         this.setState({
-          groupId
+          groupId: groupId
         }, this.updateAlternatives);
       }
     });
@@ -132,7 +132,7 @@ export class DataDimension extends Component {
     _defineProperty(this, "onDetailChange", groupDetail => {
       if (groupDetail !== this.state.groupDetail) {
         this.setState({
-          groupDetail
+          groupDetail: groupDetail
         }, this.updateAlternatives);
       }
     });
@@ -145,7 +145,7 @@ export class DataDimension extends Component {
 
     _defineProperty(this, "onFilterTextChange", filterText => {
       this.setState({
-        filterText
+        filterText: filterText
       }, debounce(async () => this.updateAlternatives(), 300));
     });
 
@@ -166,7 +166,7 @@ export class DataDimension extends Component {
 
     _defineProperty(this, "setUiItems", items => this.props.onReorder({
       dimensionType: dxId,
-      items
+      items: items
     }));
 
     _defineProperty(this, "render", () => {

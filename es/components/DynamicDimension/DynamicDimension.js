@@ -23,7 +23,7 @@ export class DynamicDimension extends Component {
     _defineProperty(this, "componentDidMount", async () => {
       const items = await apiFetchItemsByDimension(this.props.d2, this.props.dialogId);
       this.setState({
-        items
+        items: items
       });
     });
 
@@ -36,7 +36,7 @@ export class DynamicDimension extends Component {
     _defineProperty(this, "onFilterTextChange", filterText => {
       const filteredItems = this.state.items.map(item => item.name.toLowerCase().includes(filterText.toLowerCase()) && item.id);
       this.setState({
-        filterText,
+        filterText: filterText,
         unselectedIds: filteredItems
       });
     });
@@ -44,7 +44,7 @@ export class DynamicDimension extends Component {
     _defineProperty(this, "selectItemsByDimensions", selectedIds => {
       const unselectedIds = this.state.unselectedIds.filter(id => !selectedIds.includes(id));
       this.setState({
-        unselectedIds
+        unselectedIds: unselectedIds
       });
       const itemsToAdd = this.state.items.filter(di => selectedIds.includes(di.id));
       this.props.onSelect({
@@ -56,7 +56,7 @@ export class DynamicDimension extends Component {
     _defineProperty(this, "deselectItemsByDimensions", ids => {
       const unselectedIds = [...new Set([...this.state.unselectedIds, ...ids])];
       this.setState({
-        unselectedIds
+        unselectedIds: unselectedIds
       });
       this.props.onDeselect({
         dimensionType: this.props.dialogId,

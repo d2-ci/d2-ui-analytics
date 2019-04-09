@@ -50,10 +50,10 @@ export class DimensionItem extends Component {
 
     _defineProperty(this, "getDimensionType", () => {
       const {
-        id,
-        name,
-        isDeactivated,
-        onDragStart
+        id: id,
+        name: name,
+        isDeactivated: isDeactivated,
+        onDragStart: onDragStart
       } = this.props;
       return React.createElement("span", {
         "data-dimensionid": id,
@@ -66,11 +66,11 @@ export class DimensionItem extends Component {
 
   render() {
     const {
-      id,
-      isDeactivated,
-      isSelected,
-      isRecommended,
-      onOptionsClick
+      id: id,
+      isDeactivated: isDeactivated,
+      isSelected: isSelected,
+      isRecommended: isRecommended,
+      onOptionsClick: onOptionsClick
     } = this.props;
     const Icon = this.getDimensionIcon();
     const Label = this.getDimensionType();

@@ -37,7 +37,7 @@ export class UnselectedItems extends Component {
     _defineProperty(this, "onDoubleClickItem", id => {
       const highlighted = this.state.highlighted.filter(dataDimId => dataDimId !== id);
       this.setState({
-        highlighted
+        highlighted: highlighted
       });
       this.props.onSelect([id]);
     });

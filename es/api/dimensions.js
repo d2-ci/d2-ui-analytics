@@ -15,14 +15,14 @@ const selectFromResponse = (response, entity, selectorFn) => typeof selectorFn =
 
 
 const request = (d2, entity, paramString, {
-  selectorFn
+  selectorFn: selectorFn
 } = {}) => {
   const url = `/${entity}?${paramString}&paging=false`;
   return d2.Api.getApi().get(url).then(response => selectFromResponse(response, entity, selectorFn)).catch(onError);
 };
 
 const requestWithPaging = (d2, entity, paramString, page, {
-  selectorFn
+  selectorFn: selectorFn
 } = {}) => {
   const paging = `&paging=true&page=${page}`;
   const url = `/${entity}?${paramString}${paging}`;
@@ -95,9 +95,9 @@ export const apiFetchGroups = (d2, dataType, nameProp) => {
 };
 export const apiFetchAlternatives = args => {
   const {
-    d2,
-    dataType,
-    groupDetail
+    d2: d2,
+    dataType: dataType,
+    groupDetail: groupDetail
   } = args,
         queryParams = _objectWithoutProperties(args, ["d2", "dataType", "groupDetail"]);
 
@@ -105,7 +105,7 @@ export const apiFetchAlternatives = args => {
     case 'indicators':
       {
         return fetchIndicators(_objectSpread({
-          d2
+          d2: d2
         }, queryParams));
       }
 
@@ -113,11 +113,11 @@ export const apiFetchAlternatives = args => {
       {
         if (groupDetail === 'detail') {
           return fetchDataElementOperands(_objectSpread({
-            d2
+            d2: d2
           }, queryParams));
         } else {
           return fetchDataElements(_objectSpread({
-            d2
+            d2: d2
           }, queryParams));
         }
       }
@@ -125,21 +125,21 @@ export const apiFetchAlternatives = args => {
     case 'dataSets':
       {
         return fetchDataSets(_objectSpread({
-          d2
+          d2: d2
         }, queryParams));
       }
 
     case 'eventDataItems':
       {
         return queryParams.groupId ? getEventDataItems(_objectSpread({
-          d2
+          d2: d2
         }, queryParams)) : null;
       }
 
     case 'programIndicators':
       {
         return queryParams.groupId ? fetchProgramIndicators(_objectSpread({
-          d2
+          d2: d2
         }, queryParams)) : null;
       }
 
@@ -149,11 +149,11 @@ export const apiFetchAlternatives = args => {
 };
 
 const fetchIndicators = ({
-  d2,
-  nameProp,
-  groupId,
-  filterText,
-  page
+  d2: d2,
+  nameProp: nameProp,
+  groupId: groupId,
+  filterText: filterText,
+  page: page
 }) => {
   const fields = `fields=id,${nameProp}~rename(name),dimensionItemType&order=${nameProp}:asc`;
   const order = `order=${nameProp}:asc`;
@@ -168,11 +168,11 @@ const fetchIndicators = ({
 };
 
 const fetchDataElements = ({
-  d2,
-  groupId,
-  page,
-  filterText,
-  nameProp
+  d2: d2,
+  groupId: groupId,
+  page: page,
+  filterText: filterText,
+  nameProp: nameProp
 }) => {
   const idField = groupId === 'ALL' ? 'id' : 'dimensionItem~rename(id)';
   const fields = `fields=${idField},${nameProp}~rename(name)`;
@@ -192,11 +192,11 @@ const fetchDataElements = ({
 };
 
 const fetchDataElementOperands = ({
-  d2,
-  groupId,
-  page,
-  filterText,
-  nameProp
+  d2: d2,
+  groupId: groupId,
+  page: page,
+  filterText: filterText,
+  nameProp: nameProp
 }) => {
   const idField = groupId === 'ALL' ? 'id' : 'dimensionItem~rename(id)';
   const fields = `fields=${idField},${nameProp}~rename(name)`;
@@ -216,10 +216,10 @@ const fetchDataElementOperands = ({
 };
 
 const fetchDataSets = ({
-  d2,
-  page,
-  filterText,
-  nameProp
+  d2: d2,
+  page: page,
+  filterText: filterText,
+  nameProp: nameProp
 }) => {
   const fields = `fields=dimensionItem~rename(id),${nameProp}~rename(name)`;
   const order = `order=${nameProp}:asc`;
@@ -229,11 +229,11 @@ const fetchDataSets = ({
 };
 
 const fetchProgramDataElements = ({
-  d2,
-  groupId,
-  page,
-  filterText,
-  nameProp
+  d2: d2,
+  groupId: groupId,
+  page: page,
+  filterText: filterText,
+  nameProp: nameProp
 }) => {
   const fields = `fields=dimensionItem~rename(id),${nameProp}~rename(name),valueType`;
   const order = `order=${nameProp}:asc`;
@@ -244,11 +244,11 @@ const fetchProgramDataElements = ({
 };
 
 const fetchTrackedEntityAttributes = ({
-  d2,
-  groupId,
-  page,
-  filterText,
-  nameProp
+  d2: d2,
+  groupId: groupId,
+  page: page,
+  filterText: filterText,
+  nameProp: nameProp
 }) => {
   const fields = `fields=${nameProp}~rename(name),programTrackedEntityAttributes[trackedEntityAttribute[id,${nameProp}~rename(name),valueType]]`;
   const filter = filterText ? `&filter=${nameProp}:ilike:${filterText}` : '';
@@ -272,11 +272,11 @@ const getEventDataItems = async (d2, queryParams) => {
 };
 
 const fetchProgramIndicators = ({
-  d2,
-  groupId,
-  page,
-  filterText,
-  nameProp
+  d2: d2,
+  groupId: groupId,
+  page: page,
+  filterText: filterText,
+  nameProp: nameProp
 }) => {
   const fields = `fields=dimensionItem~rename(id),${nameProp}~rename(name)`;
   const order = `order=${nameProp}:asc`;

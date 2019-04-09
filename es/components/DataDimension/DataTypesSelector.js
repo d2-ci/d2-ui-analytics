@@ -7,8 +7,8 @@ import i18n from '@dhis2/d2-i18n';
 import { dataTypes } from '../../modules/dataTypes';
 import { styles } from './styles/DataTypesSelector.style';
 export const DataTypes = ({
-  currentDataType,
-  onDataTypeChange
+  currentDataType: currentDataType,
+  onDataTypeChange: onDataTypeChange
 }) => React.createElement("div", {
   style: styles.container
 }, React.createElement(InputLabel, {

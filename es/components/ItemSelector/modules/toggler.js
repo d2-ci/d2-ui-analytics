@@ -16,7 +16,7 @@ export const toggler = (id, isCtrlPressed, isShiftPressed, index, lastClickedInd
   }
 
   return {
-    ids,
+    ids: ids,
     lastClickedIndex: newIndex
   };
 };
@@ -40,7 +40,7 @@ const updateArray = (highlightedIds, id, lastClickedIndex, index) => {
   }
 
   return {
-    ids,
-    newIndex
+    ids: ids,
+    newIndex: newIndex
   };
 };

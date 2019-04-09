@@ -46,7 +46,7 @@ export class PeriodDimension extends Component {
 
     _defineProperty(this, "render", () => {
       const {
-        selectedPeriods
+        selectedPeriods: selectedPeriods
       } = this.props;
       return React.createElement(Fragment, null, React.createElement(DialogTitle, null, i18n.t('Period')), React.createElement(DialogContent, null, React.createElement(PeriodSelector, {
         onSelect: this.selectPeriods,

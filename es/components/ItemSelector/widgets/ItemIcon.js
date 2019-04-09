@@ -2,7 +2,7 @@ import _JSXStyle from "styled-jsx/style";
 import React from 'react';
 
 const ItemIcon = ({
-  backgroundColor
+  backgroundColor: backgroundColor
 }) => {
   return React.createElement("div", {
     className: _JSXStyle.dynamic([["921056640", [backgroundColor]]])

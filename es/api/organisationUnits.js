@@ -4,7 +4,7 @@ export const apiFetchOrganisationUnitRoot = d2 => {
   const fields = ['id', 'displayName', 'name'];
   const url = `${endPoint}?paging=false&userDataViewFallback=true&fields=${fields.join(',')}`;
   return d2.Api.getApi().get(url).then(({
-    organisationUnits
+    organisationUnits: organisationUnits
   }) => organisationUnits[0]).catch(onError);
 };
 /**
@@ -30,7 +30,7 @@ export const apiFetchOrganisationUnitGroups = (d2, displayNameProperty) => {
   const fields = ['id', `${displayNameProperty}~rename(displayName)`, 'name'];
   const url = `${endPoint}?paging=false&fields=${fields.join(',')}`;
   return d2.Api.getApi().get(url).then(({
-    organisationUnitGroups
+    organisationUnitGroups: organisationUnitGroups
   }) => organisationUnitGroups).catch(onError);
 };
 /**
@@ -43,6 +43,6 @@ export const apiFetchOrganisationUnitLevels = d2 => {
   const fields = ['id', 'displayName', 'name', 'level'];
   const url = `${endPoint}?paging=false&fields=${fields.join(',')}`;
   return d2.Api.getApi().get(url).then(({
-    organisationUnitLevels
+    organisationUnitLevels: organisationUnitLevels
   }) => organisationUnitLevels).catch(onError);
 };

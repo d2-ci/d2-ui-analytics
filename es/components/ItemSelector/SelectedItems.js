@@ -24,8 +24,8 @@ const Subtitle = () => React.createElement("div", {
 }, styles));
 
 const ItemsList = ({
-  innerRef,
-  children
+  innerRef: innerRef,
+  children: children
 }) => React.createElement("ul", {
   ref: innerRef,
   className: `jsx-${styles.__hash}` + " " + "selected-list"
@@ -60,7 +60,7 @@ export class SelectedItems extends Component {
       const highlighted = this.state.highlighted.filter(highlightedId => highlightedId !== id);
       this.props.onDeselect([id]);
       this.setState({
-        highlighted
+        highlighted: highlighted
       });
     });
 
@@ -104,7 +104,7 @@ export class SelectedItems extends Component {
       if (this.isMultiDrag(draggableId)) {
         const indexedItemsToMove = sortBy(this.state.highlighted.map(item => {
           return {
-            item,
+            item: item,
             idx: this.props.items.map(item => item.id).indexOf(item)
           };
         }), 'idx');
@@ -134,9 +134,9 @@ export class SelectedItems extends Component {
     });
 
     _defineProperty(this, "onDragEnd", ({
-      destination,
-      source,
-      draggableId
+      destination: destination,
+      source: source,
+      draggableId: draggableId
     }) => {
       this.setState({
         draggingId: null
@@ -155,8 +155,8 @@ export class SelectedItems extends Component {
     });
 
     _defineProperty(this, "renderListItem", ({
-      id,
-      name
+      id: id,
+      name: name
     }, index) => React.createElement(Draggable, {
       draggableId: id,
       index: index,
@@ -185,8 +185,8 @@ export class SelectedItems extends Component {
     }));
 
     _defineProperty(this, "renderCloneItem", ({
-      id,
-      name
+      id: id,
+      name: name
     }, index) => {
       const cloneId = `${id}-clone`;
       return React.createElement(Draggable, {

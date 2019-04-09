@@ -22,20 +22,20 @@ export class DimensionsPanel extends Component {
 
     _defineProperty(this, "onFilterTextChange", filterText => {
       this.setState({
-        filterText
+        filterText: filterText
       });
     });
   }
 
   render() {
     const {
-      dimensions,
-      selectedIds,
-      disabledDimension,
-      recommendedDimension,
-      onDimensionClick,
-      onDimensionOptionsClick,
-      onDimensionDragStart
+      dimensions: dimensions,
+      selectedIds: selectedIds,
+      disabledDimension: disabledDimension,
+      recommendedDimension: recommendedDimension,
+      onDimensionClick: onDimensionClick,
+      onDimensionOptionsClick: onDimensionOptionsClick,
+      onDimensionDragStart: onDimensionDragStart
     } = this.props;
     return React.createElement("div", {
       style: styles.divContainer

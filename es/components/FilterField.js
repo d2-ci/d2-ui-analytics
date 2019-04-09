@@ -4,9 +4,9 @@ import i18n from '@dhis2/d2-i18n';
 import Filter from './Filter/Filter';
 import { styles } from './styles/FilterField.style';
 export const FilterField = ({
-  text,
-  onFilterTextChange,
-  onClearFilter
+  text: text,
+  onFilterTextChange: onFilterTextChange,
+  onClearFilter: onClearFilter
 }) => React.createElement("div", {
   style: styles.container
 }, React.createElement(Filter, {

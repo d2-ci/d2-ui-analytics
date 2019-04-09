@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 import DeselectIcon from '@material-ui/icons/Close';
 import styles from './styles/DeselectIconButton.style';
 export const DeselectIconButton = ({
-  fill,
-  onClick
+  fill: fill,
+  onClick: onClick
 }) => {
   const iconStyle = {
     height: '13px',
     width: '10px',
-    fill
+    fill: fill
   };
   return React.createElement("button", {
     onClick: e => {

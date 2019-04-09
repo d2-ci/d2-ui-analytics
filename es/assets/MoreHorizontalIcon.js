@@ -18,7 +18,7 @@ React.createElement("path", {
 });
 
 const MoreHorizontalIcon = ({
-  style
+  style: style
 }) => {
   return React.createElement("svg", {
     style: _objectSpread({}, style),
