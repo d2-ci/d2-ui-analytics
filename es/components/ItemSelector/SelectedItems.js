@@ -7,7 +7,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@dhis2/d2-i18n';
-import { Button } from '@dhis2/ui-core';
+import Button from '@material-ui/core/Button/Button';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import { sortBy } from 'lodash';
 import Item from './widgets/SelectedItem';
@@ -239,11 +239,8 @@ export class SelectedItems extends Component {
       }, provided.droppableProps), itemList, provided.placeholder))), React.createElement("div", {
         className: `jsx-${styles.__hash}` + " " + "deselect-all-button"
       }, React.createElement(Button, {
-        kind: "secondary",
-        size: "small",
-        onClick: this.onDeselectAll,
-        label: i18n.t('Deselect All')
-      })), React.createElement("div", {
+        onClick: this.onDeselectAll
+      }, i18n.t('Deselect All'))), React.createElement("div", {
         className: `jsx-${styles.__hash}` + " " + "deselect-highlighted-button"
       }, React.createElement(UnAssignButton, {
         onClick: this.onDeselectHighlighted,

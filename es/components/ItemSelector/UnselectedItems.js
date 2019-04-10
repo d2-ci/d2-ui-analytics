@@ -5,7 +5,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@dhis2/d2-i18n';
-import { Button } from '@dhis2/ui-core';
+import Button from '@material-ui/core/Button/Button';
 import throttle from 'lodash/throttle';
 import Item from './widgets/UnselectedItem';
 import { ArrowButton as AssignButton } from './widgets/ArrowButton';
@@ -91,11 +91,8 @@ export class UnselectedItems extends Component {
       }, listItems)), React.createElement("div", {
         className: `jsx-${styles.__hash}` + " " + "select-all-button"
       }, React.createElement(Button, {
-        kind: "secondary",
-        size: "small",
-        onClick: this.onSelectAllClick,
-        label: i18n.t('Select All')
-      })), React.createElement("div", {
+        onClick: this.onSelectAllClick
+      }, i18n.t('Select all'))), React.createElement("div", {
         className: `jsx-${styles.__hash}` + " " + "select-highlighted-button"
       }, React.createElement(AssignButton, {
         onClick: this.onSelectClick,
