@@ -46,7 +46,7 @@ describe('UnselectedItems component', function () {
       expect(unselectedItems()).toMatchSnapshot();
     });
     it('triggers onSelect all when "select all" button clicked', function () {
-      unselectedItems().find('Button').simulate('click');
+      unselectedItems().find('.select-all-button').childAt(0).simulate('click');
       expect(props.onSelect).toHaveBeenCalled();
       expect(props.onSelect).toHaveBeenCalledWith(['rb', 'rr']);
     });
