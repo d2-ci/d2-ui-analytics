@@ -17,13 +17,13 @@ var _Button = _interopRequireDefault(require("@material-ui/core/Button/Button"))
 
 var _reactBeautifulDnd = require("react-beautiful-dnd");
 
-var _lodash = require("lodash");
-
 var _SelectedItem = _interopRequireDefault(require("./widgets/SelectedItem"));
 
 var _ArrowButton = require("./widgets/ArrowButton");
 
 var _toggler = require("./modules/toggler");
+
+var _reorderList = require("./modules/reorderList");
 
 var _SelectedItems = _interopRequireDefault(require("./styles/SelectedItems.style"));
 
@@ -164,45 +164,6 @@ function (_Component) {
       });
     });
 
-    _defineProperty(_assertThisInitialized(_this), "reorderList", function (destination, source, draggableId) {
-      var list = Array.from(_this.props.items.map(function (item) {
-        return item.id;
-      }));
-
-      if (_this.isMultiDrag(draggableId)) {
-        var indexedItemsToMove = (0, _lodash.sortBy)(_this.state.highlighted.map(function (item) {
-          return {
-            item: item,
-            idx: _this.props.items.map(function (item) {
-              return item.id;
-            }).indexOf(item)
-          };
-        }), 'idx');
-        var destinationIndex = destination.index;
-
-        if (destinationIndex < _this.props.items.length - 1 && destinationIndex > 1) {
-          indexedItemsToMove.forEach(function (indexed) {
-            if (indexed.idx < destinationIndex) {
-              --destinationIndex;
-            }
-          });
-        }
-
-        indexedItemsToMove.forEach(function (indexed) {
-          var idx = list.indexOf(indexed.item);
-          list.splice(idx, 1);
-        });
-        indexedItemsToMove.forEach(function (indexed, i) {
-          list.splice(destinationIndex + i, 0, indexed.item);
-        });
-      } else {
-        list.splice(source.index, 1);
-        list.splice(destination.index, 0, draggableId);
-      }
-
-      return list;
-    });
-
     _defineProperty(_assertThisInitialized(_this), "onDragEnd", function (_ref2) {
       var destination = _ref2.destination,
           source = _ref2.source,
@@ -220,7 +181,14 @@ function (_Component) {
         return;
       }
 
-      var newList = _this.reorderList(destination, source, draggableId);
+      var newList = (0, _reorderList.reorderList)({
+        destinationIndex: destination.index,
+        sourceIndex: source.index,
+        draggableId: draggableId,
+        isMultiDrag: _this.isMultiDrag(draggableId),
+        items: _this.props.items,
+        highlightedItemIds: _this.state.highlighted
+      });
 
       _this.props.onReorder(newList);
     });
