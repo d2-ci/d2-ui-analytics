@@ -140,7 +140,7 @@ function (_Component) {
       _this.props.onSelect({
         dimensionType: _this.props.dialogId,
         value: [].concat(_toConsumableArray(_this.props.selectedItems.filter(function (item) {
-          return !selectedIds.include(item.id);
+          return !selectedIds.includes(item.id);
         })), _toConsumableArray(itemsToAdd))
       });
     });
