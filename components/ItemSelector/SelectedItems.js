@@ -1,11 +1,29 @@
 "use strict";
 
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = exports.SelectedItems = void 0;
 
 var _style = _interopRequireDefault(require("styled-jsx/style"));
+
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf3 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+
+var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
+
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -26,28 +44,6 @@ var _toggler = require("./modules/toggler");
 var _reorderList = require("./modules/reorderList");
 
 var _SelectedItems = _interopRequireDefault(require("./styles/SelectedItems.style"));
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var Subtitle = function Subtitle() {
   return _react.default.createElement("div", {
@@ -79,36 +75,33 @@ _react.default.createElement(Subtitle, null);
 var SelectedItems =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(SelectedItems, _Component);
+  (0, _inherits2.default)(SelectedItems, _Component);
 
   function SelectedItems() {
     var _getPrototypeOf2;
 
     var _this;
 
-    _classCallCheck(this, SelectedItems);
+    (0, _classCallCheck2.default)(this, SelectedItems);
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(SelectedItems)).call.apply(_getPrototypeOf2, [this].concat(args)));
-
-    _defineProperty(_assertThisInitialized(_this), "state", {
+    _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(SelectedItems)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "state", {
       highlighted: [],
       lastClickedIndex: 0,
       draggingId: null
     });
-
-    _defineProperty(_assertThisInitialized(_this), "onDeselectHighlighted", function () {
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "onDeselectHighlighted", function () {
       _this.props.onDeselect(_this.state.highlighted);
 
       _this.setState({
         highlighted: []
       });
     });
-
-    _defineProperty(_assertThisInitialized(_this), "onDeselectOne", function (id) {
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "onDeselectOne", function (id) {
       var highlighted = _this.state.highlighted.filter(function (highlightedId) {
         return highlightedId !== id;
       });
@@ -119,8 +112,7 @@ function (_Component) {
         highlighted: highlighted
       });
     });
-
-    _defineProperty(_assertThisInitialized(_this), "onDeselectAll", function () {
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "onDeselectAll", function () {
       _this.props.onDeselect(_this.props.items.map(function (item) {
         return item.id;
       }));
@@ -129,8 +121,7 @@ function (_Component) {
         highlighted: []
       });
     });
-
-    _defineProperty(_assertThisInitialized(_this), "toggleHighlight", function (isCtrlPressed, isShiftPressed, index, id) {
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "toggleHighlight", function (isCtrlPressed, isShiftPressed, index, id) {
       var newState = (0, _toggler.toggler)(id, isCtrlPressed, isShiftPressed, index, _this.state.lastClickedIndex, _this.state.highlighted, _this.props.items.map(function (item) {
         return item.id;
       }));
@@ -140,12 +131,10 @@ function (_Component) {
         lastClickedIndex: newState.lastClickedIndex
       });
     });
-
-    _defineProperty(_assertThisInitialized(_this), "isMultiDrag", function (draggableId) {
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "isMultiDrag", function (draggableId) {
       return _this.state.highlighted.includes(draggableId) && _this.state.highlighted.length > 1;
     });
-
-    _defineProperty(_assertThisInitialized(_this), "onDragStart", function (start) {
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "onDragStart", function (start) {
       var id = start.draggableId;
 
       var selected = _this.state.highlighted.find(function (itemId) {
@@ -163,8 +152,7 @@ function (_Component) {
         draggingId: start.draggableId
       });
     });
-
-    _defineProperty(_assertThisInitialized(_this), "onDragEnd", function (_ref2) {
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "onDragEnd", function (_ref2) {
       var destination = _ref2.destination,
           source = _ref2.source,
           draggableId = _ref2.draggableId;
@@ -192,8 +180,7 @@ function (_Component) {
 
       _this.props.onReorder(newList);
     });
-
-    _defineProperty(_assertThisInitialized(_this), "renderListItem", function (_ref3, index) {
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "renderListItem", function (_ref3, index) {
       var id = _ref3.id,
           name = _ref3.name;
       return _react.default.createElement(_reactBeautifulDnd.Draggable, {
@@ -205,7 +192,7 @@ function (_Component) {
 
         var ghost = _this.state.highlighted.includes(id) && Boolean(_this.state.draggingId) && _this.state.draggingId !== id;
         var itemText = isDraggedItem ? "".concat(_this.state.highlighted.length, " items") : name;
-        return _react.default.createElement("li", _extends({
+        return _react.default.createElement("li", (0, _extends2.default)({
           id: id,
           onDoubleClick: function onDoubleClick() {
             return _this.onDeselectOne(id);
@@ -226,8 +213,7 @@ function (_Component) {
         }, _SelectedItems.default));
       });
     });
-
-    _defineProperty(_assertThisInitialized(_this), "renderCloneItem", function (_ref4, index) {
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "renderCloneItem", function (_ref4, index) {
       var id = _ref4.id,
           name = _ref4.name;
       var cloneId = "".concat(id, "-clone");
@@ -236,7 +222,7 @@ function (_Component) {
         index: index,
         key: cloneId
       }, function (provided) {
-        return _react.default.createElement("li", _extends({
+        return _react.default.createElement("li", (0, _extends2.default)({
           id: cloneId
         }, provided.draggableProps, provided.dragHandleProps, {
           ref: provided.innerRef,
@@ -253,8 +239,7 @@ function (_Component) {
         }, _SelectedItems.default));
       });
     });
-
-    _defineProperty(_assertThisInitialized(_this), "getItemListWithClone", function () {
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "getItemListWithClone", function () {
       var list = [];
 
       _this.props.items.forEach(function (item) {
@@ -272,8 +257,7 @@ function (_Component) {
 
       return list;
     });
-
-    _defineProperty(_assertThisInitialized(_this), "render", function () {
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "render", function () {
       var itemList = _this.getItemListWithClone().map(function (item, i) {
         return item.clone ? _this.renderCloneItem(item, i) : _this.renderListItem(item, i);
       });
@@ -284,7 +268,7 @@ function (_Component) {
       }, _react.default.createElement(_reactBeautifulDnd.Droppable, {
         droppableId: "selected-items-droppable"
       }, function (provided) {
-        return _react.default.createElement(ItemsList, _extends({
+        return _react.default.createElement(ItemsList, (0, _extends2.default)({
           innerRef: provided.innerRef
         }, provided.droppableProps), itemList, provided.placeholder);
       })), _react.default.createElement("div", {
@@ -300,7 +284,6 @@ function (_Component) {
         id: _SelectedItems.default.__hash
       }, _SelectedItems.default));
     });
-
     return _this;
   }
 

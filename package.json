@@ -1,6 +1,6 @@
 {
   "name": "@dhis2/d2-ui-analytics",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "main": "./index.js",
   "sideEffects": false,
   "repository": "git@github.com:dhis2/d2-ui-analytics.git",
@@ -31,6 +31,7 @@
     "@babel/plugin-proposal-class-properties": "^7.0.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
     "@babel/plugin-transform-react-constant-elements": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.4.3",
     "@babel/plugin-transform-shorthand-properties": "^7.2.0",
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-react": "^7.0.0",

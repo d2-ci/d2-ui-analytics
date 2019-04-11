@@ -1,12 +1,12 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 var _react = _interopRequireDefault(require("react"));
 
 var _enzyme = require("enzyme");
 
 var _SelectedItems = require("../SelectedItems");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 describe('The SelectedItems component', function () {
   var props;

@@ -1,9 +1,31 @@
 "use strict";
 
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = exports.DynamicDimension = void 0;
+
+var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toConsumableArray"));
+
+var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+
+var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
+
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf3 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+
+var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
+
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -21,71 +43,37 @@ var _dimensions = require("../../api/dimensions");
 
 var _DynamicDimension = require("./styles/DynamicDimension.style");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
-
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 var DynamicDimension =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(DynamicDimension, _Component);
+  (0, _inherits2.default)(DynamicDimension, _Component);
 
   function DynamicDimension() {
     var _getPrototypeOf2;
 
     var _this;
 
-    _classCallCheck(this, DynamicDimension);
+    (0, _classCallCheck2.default)(this, DynamicDimension);
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(DynamicDimension)).call.apply(_getPrototypeOf2, [this].concat(args)));
-
-    _defineProperty(_assertThisInitialized(_this), "state", {
+    _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(DynamicDimension)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "state", {
       filterText: '',
       nextPage: null,
       items: [],
       unselectedIds: [],
       selectedIds: []
     });
-
-    _defineProperty(_assertThisInitialized(_this), "componentDidMount",
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "componentDidMount",
     /*#__PURE__*/
-    _asyncToGenerator(
+    (0, _asyncToGenerator2.default)(
     /*#__PURE__*/
-    regeneratorRuntime.mark(function _callee() {
+    _regenerator.default.mark(function _callee() {
       var items;
-      return regeneratorRuntime.wrap(function _callee$(_context) {
+      return _regenerator.default.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
@@ -106,14 +94,12 @@ function (_Component) {
         }
       }, _callee);
     })));
-
-    _defineProperty(_assertThisInitialized(_this), "onClearFilter", function () {
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "onClearFilter", function () {
       _this.setState({
         filterText: ''
       });
     });
-
-    _defineProperty(_assertThisInitialized(_this), "onFilterTextChange", function (filterText) {
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "onFilterTextChange", function (filterText) {
       var filteredItems = _this.state.items.map(function (item) {
         return item.name.toLowerCase().includes(filterText.toLowerCase()) && item.id;
       });
@@ -123,8 +109,7 @@ function (_Component) {
         unselectedIds: filteredItems
       });
     });
-
-    _defineProperty(_assertThisInitialized(_this), "selectItemsByDimensions", function (selectedIds) {
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "selectItemsByDimensions", function (selectedIds) {
       var unselectedIds = _this.state.unselectedIds.filter(function (id) {
         return !selectedIds.includes(id);
       });
@@ -139,14 +124,13 @@ function (_Component) {
 
       _this.props.onSelect({
         dimensionType: _this.props.dialogId,
-        value: [].concat(_toConsumableArray(_this.props.selectedItems.filter(function (item) {
+        value: [].concat((0, _toConsumableArray2.default)(_this.props.selectedItems.filter(function (item) {
           return !selectedIds.includes(item.id);
-        })), _toConsumableArray(itemsToAdd))
+        })), (0, _toConsumableArray2.default)(itemsToAdd))
       });
     });
-
-    _defineProperty(_assertThisInitialized(_this), "deselectItemsByDimensions", function (ids) {
-      var unselectedIds = _toConsumableArray(new Set([].concat(_toConsumableArray(_this.state.unselectedIds), _toConsumableArray(ids))));
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "deselectItemsByDimensions", function (ids) {
+      var unselectedIds = (0, _toConsumableArray2.default)(new Set([].concat((0, _toConsumableArray2.default)(_this.state.unselectedIds), (0, _toConsumableArray2.default)(ids))));
 
       _this.setState({
         unselectedIds: unselectedIds
@@ -157,23 +141,20 @@ function (_Component) {
         value: ids
       });
     });
-
-    _defineProperty(_assertThisInitialized(_this), "getUnselectedItems", function () {
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "getUnselectedItems", function () {
       return _this.state.items.filter(function (item) {
         return !_this.props.selectedItems.find(function (i) {
           return i.id === item.id;
         });
       });
     });
-
-    _defineProperty(_assertThisInitialized(_this), "setUiItems", function (items) {
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "setUiItems", function (items) {
       return _this.props.onReorder({
         dimensionType: _this.props.dialogId,
         value: items
       });
     });
-
-    _defineProperty(_assertThisInitialized(_this), "render", function () {
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "render", function () {
       var filterZone = function filterZone() {
         return _react.default.createElement(_FilterField.default, {
           text: _this.state.filterText,
@@ -201,7 +182,6 @@ function (_Component) {
         selected: selected
       }, filterZone())));
     });
-
     return _this;
   }
 

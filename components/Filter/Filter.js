@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -20,8 +22,6 @@ var _Search = _interopRequireDefault(require("@material-ui/icons/Search"));
 var _Close = _interopRequireDefault(require("@material-ui/icons/Close"));
 
 var _Filter = require("./styles/Filter.style");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ref = null;
 

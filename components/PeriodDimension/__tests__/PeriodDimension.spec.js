@@ -1,12 +1,12 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 var _react = _interopRequireDefault(require("react"));
 
 var _reactTestRenderer = _interopRequireDefault(require("react-test-renderer"));
 
 var _PeriodDimension = require("../PeriodDimension");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 jest.mock('@dhis2/d2-ui-period-selector-dialog', function () {
   return {

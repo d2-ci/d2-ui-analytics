@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 var _react = _interopRequireDefault(require("react"));
 
 var _enzyme = require("enzyme");
@@ -11,8 +13,6 @@ var _TextField = _interopRequireDefault(require("@material-ui/core/TextField"));
 var _IconButton = _interopRequireDefault(require("@material-ui/core/IconButton"));
 
 var _Search = _interopRequireDefault(require("@material-ui/icons/Search"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 describe('The Filter component ', function () {
   var shallowFilter;

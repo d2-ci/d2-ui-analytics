@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -14,8 +16,6 @@ var _d2I18n = _interopRequireDefault(require("@dhis2/d2-i18n"));
 var _Filter = _interopRequireDefault(require("./Filter/Filter"));
 
 var _FilterField = require("./styles/FilterField.style");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var FilterField = function FilterField(_ref) {
   var text = _ref.text,

@@ -1,9 +1,31 @@
 "use strict";
 
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = exports.DataDimension = void 0;
+
+var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+
+var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
+
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf3 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+
+var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
+
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -37,34 +59,6 @@ var _fixedDimensions = require("../../modules/fixedDimensions");
 
 var _DataDimension = require("./styles/DataDimension.style");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 var dxId = _fixedDimensions.FIXED_DIMENSIONS.dx.id;
 var FIRST_PAGE = 1;
 var DEFAULT_ALTERNATIVES = {
@@ -75,22 +69,21 @@ var DEFAULT_ALTERNATIVES = {
 var DataDimension =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(DataDimension, _Component);
+  (0, _inherits2.default)(DataDimension, _Component);
 
   function DataDimension() {
     var _getPrototypeOf2;
 
     var _this;
 
-    _classCallCheck(this, DataDimension);
+    (0, _classCallCheck2.default)(this, DataDimension);
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(DataDimension)).call.apply(_getPrototypeOf2, [this].concat(args)));
-
-    _defineProperty(_assertThisInitialized(_this), "state", {
+    _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(DataDimension)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "state", {
       dataType: _dataTypes.DEFAULT_DATATYPE_ID,
       groups: {
         indicators: [],
@@ -108,14 +101,13 @@ function (_Component) {
       nextPage: null,
       filter: {}
     });
-
-    _defineProperty(_assertThisInitialized(_this), "updateGroups",
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "updateGroups",
     /*#__PURE__*/
-    _asyncToGenerator(
+    (0, _asyncToGenerator2.default)(
     /*#__PURE__*/
-    regeneratorRuntime.mark(function _callee() {
+    _regenerator.default.mark(function _callee() {
       var dataType, dataTypeGroups, groups;
-      return regeneratorRuntime.wrap(function _callee$(_context) {
+      return _regenerator.default.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
@@ -131,7 +123,7 @@ function (_Component) {
 
             case 4:
               dataTypeGroups = _context.sent;
-              groups = Object.assign({}, _this.state.groups, _defineProperty({}, dataType, dataTypeGroups));
+              groups = Object.assign({}, _this.state.groups, (0, _defineProperty2.default)({}, dataType, dataTypeGroups));
 
               _this.setState({
                 groups: groups
@@ -150,10 +142,9 @@ function (_Component) {
         }
       }, _callee);
     })));
-
-    _defineProperty(_assertThisInitialized(_this), "onDataTypeChange", function (dataType) {
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "onDataTypeChange", function (dataType) {
       if (dataType !== _this.state.dataType) {
-        var filter = Object.assign({}, _this.state.filter, _defineProperty({}, _this.state.dataType, {
+        var filter = Object.assign({}, _this.state.filter, (0, _defineProperty2.default)({}, _this.state.dataType, {
           groupId: _this.state.groupId,
           groupDetail: _this.state.groupDetail
         }));
@@ -170,18 +161,16 @@ function (_Component) {
         }, _this.updateGroups);
       }
     });
-
-    _defineProperty(_assertThisInitialized(_this), "requestMoreItems", function () {
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "requestMoreItems", function () {
       if (_this.state.nextPage) {
         _this.updateAlternatives(_this.state.nextPage, true);
       }
     });
-
-    _defineProperty(_assertThisInitialized(_this), "updateAlternatives",
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "updateAlternatives",
     /*#__PURE__*/
-    _asyncToGenerator(
+    (0, _asyncToGenerator2.default)(
     /*#__PURE__*/
-    regeneratorRuntime.mark(function _callee2() {
+    _regenerator.default.mark(function _callee2() {
       var page,
           concatItems,
           _this$state,
@@ -196,7 +185,7 @@ function (_Component) {
           items,
           _args2 = arguments;
 
-      return regeneratorRuntime.wrap(function _callee2$(_context2) {
+      return _regenerator.default.wrap(function _callee2$(_context2) {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
@@ -251,14 +240,13 @@ function (_Component) {
         }
       }, _callee2);
     })));
-
-    _defineProperty(_assertThisInitialized(_this), "onGroupChange",
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "onGroupChange",
     /*#__PURE__*/
     function () {
-      var _ref4 = _asyncToGenerator(
+      var _ref4 = (0, _asyncToGenerator2.default)(
       /*#__PURE__*/
-      regeneratorRuntime.mark(function _callee3(groupId) {
-        return regeneratorRuntime.wrap(function _callee3$(_context3) {
+      _regenerator.default.mark(function _callee3(groupId) {
+        return _regenerator.default.wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
@@ -280,24 +268,22 @@ function (_Component) {
         return _ref4.apply(this, arguments);
       };
     }());
-
-    _defineProperty(_assertThisInitialized(_this), "onDetailChange", function (groupDetail) {
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "onDetailChange", function (groupDetail) {
       if (groupDetail !== _this.state.groupDetail) {
         _this.setState({
           groupDetail: groupDetail
         }, _this.updateAlternatives);
       }
     });
-
-    _defineProperty(_assertThisInitialized(_this), "onClearFilter", function () {
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "onClearFilter", function () {
       _this.setState({
         filterText: ''
       }, (0, _debounce.default)(
       /*#__PURE__*/
-      _asyncToGenerator(
+      (0, _asyncToGenerator2.default)(
       /*#__PURE__*/
-      regeneratorRuntime.mark(function _callee4() {
-        return regeneratorRuntime.wrap(function _callee4$(_context4) {
+      _regenerator.default.mark(function _callee4() {
+        return _regenerator.default.wrap(function _callee4$(_context4) {
           while (1) {
             switch (_context4.prev = _context4.next) {
               case 0:
@@ -311,16 +297,15 @@ function (_Component) {
         }, _callee4);
       })), 300));
     });
-
-    _defineProperty(_assertThisInitialized(_this), "onFilterTextChange", function (filterText) {
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "onFilterTextChange", function (filterText) {
       _this.setState({
         filterText: filterText
       }, (0, _debounce.default)(
       /*#__PURE__*/
-      _asyncToGenerator(
+      (0, _asyncToGenerator2.default)(
       /*#__PURE__*/
-      regeneratorRuntime.mark(function _callee5() {
-        return regeneratorRuntime.wrap(function _callee5$(_context5) {
+      _regenerator.default.mark(function _callee5() {
+        return _regenerator.default.wrap(function _callee5$(_context5) {
           while (1) {
             switch (_context5.prev = _context5.next) {
               case 0:
@@ -334,8 +319,7 @@ function (_Component) {
         }, _callee5);
       })), 300));
     });
-
-    _defineProperty(_assertThisInitialized(_this), "selectDataDimensions", function (selectedIds) {
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "selectDataDimensions", function (selectedIds) {
       var itemsToAdd = (0, _keyBy.default)(_this.state.items.filter(function (di) {
         return selectedIds.includes(di.id);
       }), 'id');
@@ -345,22 +329,19 @@ function (_Component) {
         value: itemsToAdd
       });
     });
-
-    _defineProperty(_assertThisInitialized(_this), "deselectDataDimensions", function (ids) {
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "deselectDataDimensions", function (ids) {
       _this.props.onDeselect({
         dimensionType: dxId,
         value: ids
       });
     });
-
-    _defineProperty(_assertThisInitialized(_this), "setUiItems", function (items) {
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "setUiItems", function (items) {
       return _this.props.onReorder({
         dimensionType: dxId,
         items: items
       });
     });
-
-    _defineProperty(_assertThisInitialized(_this), "render", function () {
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "render", function () {
       var groups = _this.state.groups[_this.state.dataType] || [];
 
       var filterZone = function filterZone() {
@@ -401,11 +382,10 @@ function (_Component) {
         selected: selected
       }, filterZone())));
     });
-
     return _this;
   }
 
-  _createClass(DataDimension, [{
+  (0, _createClass2.default)(DataDimension, [{
     key: "componentDidMount",
     value: function componentDidMount() {
       this.updateGroups();
@@ -425,7 +405,6 @@ function (_Component) {
       }
     }
   }]);
-
   return DataDimension;
 }(_react.Component);
 

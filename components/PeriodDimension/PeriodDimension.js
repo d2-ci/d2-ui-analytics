@@ -1,9 +1,29 @@
 "use strict";
 
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = exports.PeriodDimension = void 0;
+
+var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toConsumableArray"));
+
+var _objectSpread2 = _interopRequireDefault(require("@babel/runtime/helpers/objectSpread"));
+
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf3 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+
+var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
+
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -19,60 +39,29 @@ var _d2I18n = _interopRequireDefault(require("@dhis2/d2-i18n"));
 
 var _fixedDimensions = require("../../modules/fixedDimensions");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
-
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 var peId = _fixedDimensions.FIXED_DIMENSIONS.pe.id;
 var PERIOD = 'PERIOD';
 
 var PeriodDimension =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(PeriodDimension, _Component);
+  (0, _inherits2.default)(PeriodDimension, _Component);
 
   function PeriodDimension() {
     var _getPrototypeOf2;
 
     var _this;
 
-    _classCallCheck(this, PeriodDimension);
+    (0, _classCallCheck2.default)(this, PeriodDimension);
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(PeriodDimension)).call.apply(_getPrototypeOf2, [this].concat(args)));
-
-    _defineProperty(_assertThisInitialized(_this), "selectPeriods", function (periods) {
+    _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(PeriodDimension)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "selectPeriods", function (periods) {
       var itemsToAdd = periods.reduce(function (array, item) {
-        array.push(_objectSpread({}, item, {
+        array.push((0, _objectSpread2.default)({}, item, {
           dimensionItemType: PERIOD
         }));
         return array;
@@ -80,11 +69,10 @@ function (_Component) {
 
       _this.props.onSelect({
         dimensionType: peId,
-        value: [].concat(_toConsumableArray(_this.props.selectedPeriods), _toConsumableArray(itemsToAdd))
+        value: [].concat((0, _toConsumableArray2.default)(_this.props.selectedPeriods), (0, _toConsumableArray2.default)(itemsToAdd))
       });
     });
-
-    _defineProperty(_assertThisInitialized(_this), "deselectPeriods", function (periods) {
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "deselectPeriods", function (periods) {
       var idsToRemove = periods.map(function (period) {
         return period.id;
       });
@@ -94,8 +82,7 @@ function (_Component) {
         value: idsToRemove
       });
     });
-
-    _defineProperty(_assertThisInitialized(_this), "reorderPeriods", function (periods) {
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "reorderPeriods", function (periods) {
       var ids = periods.map(function (period) {
         return period.id;
       });
@@ -105,8 +92,7 @@ function (_Component) {
         value: ids
       });
     });
-
-    _defineProperty(_assertThisInitialized(_this), "render", function () {
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "render", function () {
       var selectedPeriods = _this.props.selectedPeriods;
       return _react.default.createElement(_react.Fragment, null, _react.default.createElement(_DialogTitle.default, null, _d2I18n.default.t('Period')), _react.default.createElement(_DialogContent.default, null, _react.default.createElement(_d2UiPeriodSelectorDialog.PeriodSelector, {
         onSelect: _this.selectPeriods,
@@ -115,7 +101,6 @@ function (_Component) {
         selectedItems: selectedPeriods
       })));
     });
-
     return _this;
   }
 

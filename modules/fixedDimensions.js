@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -12,8 +14,6 @@ var _DataIcon = _interopRequireDefault(require("../assets/DataIcon"));
 var _PeriodIcon = _interopRequireDefault(require("../assets/PeriodIcon"));
 
 var _OrgUnitIcon = _interopRequireDefault(require("../assets/OrgUnitIcon"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var FIXED_DIMENSIONS = {
   dx: {

@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -14,8 +16,6 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 var _Close = _interopRequireDefault(require("@material-ui/icons/Close"));
 
 var _DeselectIconButton = _interopRequireDefault(require("./styles/DeselectIconButton.style"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var DeselectIconButton = function DeselectIconButton(_ref) {
   var fill = _ref.fill,

@@ -1,11 +1,15 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = exports.Item = void 0;
 
 var _style = _interopRequireDefault(require("styled-jsx/style"));
+
+var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -19,12 +23,6 @@ var _colors = require("../styles/colors");
 
 var _UnselectedItem = _interopRequireDefault(require("./styles/UnselectedItem.style"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
 var onClickWrapper = function onClickWrapper(_ref) {
   var id = _ref.id,
       index = _ref.index,
@@ -37,8 +35,7 @@ var onClickWrapper = function onClickWrapper(_ref) {
 var Item = function Item(_ref2) {
   var name = _ref2.name,
       highlighted = _ref2.highlighted,
-      rest = _objectWithoutProperties(_ref2, ["name", "highlighted"]);
-
+      rest = (0, _objectWithoutProperties2.default)(_ref2, ["name", "highlighted"]);
   return _react.default.createElement("div", {
     onClick: onClickWrapper(rest),
     "data-test": "dimension-item-".concat(rest.id),

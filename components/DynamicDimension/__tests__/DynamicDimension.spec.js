@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 var _react = _interopRequireDefault(require("react"));
 
 var _enzyme = require("enzyme");
@@ -9,8 +11,6 @@ var _DialogTitle = _interopRequireDefault(require("@material-ui/core/DialogTitle
 var _DialogContent = _interopRequireDefault(require("@material-ui/core/DialogContent"));
 
 var _DynamicDimension = require("../DynamicDimension");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 describe('The Period Dimension component ', function () {
   var props;

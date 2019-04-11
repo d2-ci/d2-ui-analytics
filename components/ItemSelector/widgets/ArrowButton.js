@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -14,8 +16,6 @@ var _ArrowForward = _interopRequireDefault(require("@material-ui/icons/ArrowForw
 var _ArrowBack = _interopRequireDefault(require("@material-ui/icons/ArrowBack"));
 
 var _ArrowButton = _interopRequireDefault(require("./styles/ArrowButton.style"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _ref2 =
 /*#__PURE__*/

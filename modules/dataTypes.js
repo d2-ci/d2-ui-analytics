@@ -1,11 +1,17 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.defaultGroupId = defaultGroupId;
 exports.defaultGroupDetail = defaultGroupDetail;
 exports.DEFAULT_DATATYPE_ID = exports.dataTypes = exports.ALL_ID = exports.CHART_AGGREGATE_AGGREGATABLE_TYPES = void 0;
+
+var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toConsumableArray"));
+
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -14,18 +20,6 @@ var _d2I18n = _interopRequireDefault(require("@dhis2/d2-i18n"));
 var _dataSets = require("../modules/dataSets");
 
 var _alternatives, _dataTypes;
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
-
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var CHART_AGGREGATE_AGGREGATABLE_TYPES = ['BOOLEAN', 'TRUE_ONLY', 'INTEGER', 'INTEGER_POSITIVE', 'INTEGER_NEGATIVE', 'INTEGER_ZERO_OR_POSITIVE', 'NUMBER', 'UNIT_INTERVAL', 'PERCENTAGE'];
 exports.CHART_AGGREGATE_AGGREGATABLE_TYPES = CHART_AGGREGATE_AGGREGATABLE_TYPES;
@@ -51,7 +45,7 @@ var _ref2 =
 /*#__PURE__*/
 _react.default.createElement("span", null, selectProgramText);
 
-var dataTypes = (_dataTypes = {}, _defineProperty(_dataTypes, INDICATORS, {
+var dataTypes = (_dataTypes = {}, (0, _defineProperty2.default)(_dataTypes, INDICATORS, {
   id: INDICATORS,
   name: _d2I18n.default.t('Indicators'),
   groupLabel: _d2I18n.default.t('Select indicator group'),
@@ -60,7 +54,7 @@ var dataTypes = (_dataTypes = {}, _defineProperty(_dataTypes, INDICATORS, {
     name: _d2I18n.default.t('[ All groups ]')
   },
   groupDetail: false
-}), _defineProperty(_dataTypes, DATA_ELEMENTS, {
+}), (0, _defineProperty2.default)(_dataTypes, DATA_ELEMENTS, {
   id: DATA_ELEMENTS,
   name: _d2I18n.default.t('Data elements'),
   groupLabel: _d2I18n.default.t('Select data element group'),
@@ -69,10 +63,10 @@ var dataTypes = (_dataTypes = {}, _defineProperty(_dataTypes, INDICATORS, {
     name: _d2I18n.default.t('[ All data elements ]')
   },
   groupDetail: {
-    alternatives: (_alternatives = {}, _defineProperty(_alternatives, TOTALS, _d2I18n.default.t('Totals')), _defineProperty(_alternatives, DETAIL, _d2I18n.default.t('Details')), _alternatives),
+    alternatives: (_alternatives = {}, (0, _defineProperty2.default)(_alternatives, TOTALS, _d2I18n.default.t('Totals')), (0, _defineProperty2.default)(_alternatives, DETAIL, _d2I18n.default.t('Details')), _alternatives),
     default: TOTALS
   }
-}), _defineProperty(_dataTypes, DATA_SETS, {
+}), (0, _defineProperty2.default)(_dataTypes, DATA_SETS, {
   id: DATA_SETS,
   name: _d2I18n.default.t('Data sets'),
   groupLabel: _d2I18n.default.t('Select data sets'),
@@ -84,7 +78,7 @@ var dataTypes = (_dataTypes = {}, _defineProperty(_dataTypes, INDICATORS, {
   augmentAlternatives: function augmentAlternatives(alternatives, groupId) {
     return getReportingRates(alternatives, groupId);
   }
-}), _defineProperty(_dataTypes, EVENT_DATA_ITEMS, {
+}), (0, _defineProperty2.default)(_dataTypes, EVENT_DATA_ITEMS, {
   id: EVENT_DATA_ITEMS,
   name: _d2I18n.default.t('Event data items'),
   groupLabel: programText,
@@ -93,7 +87,7 @@ var dataTypes = (_dataTypes = {}, _defineProperty(_dataTypes, INDICATORS, {
   },
   defaultGroup: null,
   groupDetail: false
-}), _defineProperty(_dataTypes, PROGRAM_INDICATORS, {
+}), (0, _defineProperty2.default)(_dataTypes, PROGRAM_INDICATORS, {
   id: PROGRAM_INDICATORS,
   name: _d2I18n.default.t('Program indicators'),
   groupLabel: programText,
@@ -124,7 +118,7 @@ var getReportingRates = function getReportingRates(contents, groupSetId) {
   });
 
   groupSetId === ALL_ID ? _dataSets.DATA_SETS_CONSTANTS.forEach(function (reportingRate) {
-    return dataSets = [].concat(_toConsumableArray(dataSets), _toConsumableArray(contents.map(function (dataSet) {
+    return dataSets = [].concat((0, _toConsumableArray2.default)(dataSets), (0, _toConsumableArray2.default)(contents.map(function (dataSet) {
       return concatReportingRate(dataSet, reportingRate);
     })));
   }) : dataSets = contents.map(function (dataSet) {

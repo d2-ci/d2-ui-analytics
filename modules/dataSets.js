@@ -1,13 +1,13 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.DATA_SETS_CONSTANTS = exports.EXPECTED_REPORTS = exports.ACTUAL_REPORTS_ON_TIME = exports.ACTUAL_REPORTS = exports.REPORTING_RATE_ON_TIME = exports.REPORTING_RATE = void 0;
 
 var _d2I18n = _interopRequireDefault(require("@dhis2/d2-i18n"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var REPORTING_RATE = 'REPORTING_RATE';
 exports.REPORTING_RATE = REPORTING_RATE;

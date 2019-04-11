@@ -1,9 +1,23 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.apiFetchAlternatives = exports.apiFetchGroups = exports.apiFetchItemsByDimension = exports.apiFetchRecommendedIds = exports.apiFetchDimensions = void 0;
+
+var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+
+var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toConsumableArray"));
+
+var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
+
+var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
+
+var _objectSpread2 = _interopRequireDefault(require("@babel/runtime/helpers/objectSpread"));
+
+var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
 var _sortBy = _interopRequireDefault(require("lodash/sortBy"));
 
@@ -12,36 +26,6 @@ var _index = require("./index");
 var _dataSets = require("../modules/dataSets");
 
 var _dataTypes = require("../modules/dataTypes");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
-
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 // Request util functions
 var selectFromResponse = function selectFromResponse(response, entity, selectorFn) {
@@ -156,12 +140,12 @@ var apiFetchAlternatives = function apiFetchAlternatives(args) {
   var d2 = args.d2,
       dataType = args.dataType,
       groupDetail = args.groupDetail,
-      queryParams = _objectWithoutProperties(args, ["d2", "dataType", "groupDetail"]);
+      queryParams = (0, _objectWithoutProperties2.default)(args, ["d2", "dataType", "groupDetail"]);
 
   switch (dataType) {
     case 'indicators':
       {
-        return fetchIndicators(_objectSpread({
+        return fetchIndicators((0, _objectSpread2.default)({
           d2: d2
         }, queryParams));
       }
@@ -169,11 +153,11 @@ var apiFetchAlternatives = function apiFetchAlternatives(args) {
     case 'dataElements':
       {
         if (groupDetail === 'detail') {
-          return fetchDataElementOperands(_objectSpread({
+          return fetchDataElementOperands((0, _objectSpread2.default)({
             d2: d2
           }, queryParams));
         } else {
-          return fetchDataElements(_objectSpread({
+          return fetchDataElements((0, _objectSpread2.default)({
             d2: d2
           }, queryParams));
         }
@@ -181,21 +165,21 @@ var apiFetchAlternatives = function apiFetchAlternatives(args) {
 
     case 'dataSets':
       {
-        return fetchDataSets(_objectSpread({
+        return fetchDataSets((0, _objectSpread2.default)({
           d2: d2
         }, queryParams));
       }
 
     case 'eventDataItems':
       {
-        return queryParams.groupId ? getEventDataItems(_objectSpread({
+        return queryParams.groupId ? getEventDataItems((0, _objectSpread2.default)({
           d2: d2
         }, queryParams)) : null;
       }
 
     case 'programIndicators':
       {
-        return queryParams.groupId ? fetchProgramIndicators(_objectSpread({
+        return queryParams.groupId ? fetchProgramIndicators((0, _objectSpread2.default)({
           d2: d2
         }, queryParams)) : null;
       }
@@ -311,7 +295,7 @@ var fetchTrackedEntityAttributes = function fetchTrackedEntityAttributes(_ref8) 
       return Array.isArray(r.programTrackedEntityAttributes) ? r.programTrackedEntityAttributes.map(function (a) {
         return a.trackedEntityAttribute;
       }).map(function (a) {
-        return _objectSpread({}, a, {
+        return (0, _objectSpread2.default)({}, a, {
           id: "".concat(groupId, ".").concat(a.id),
           name: "".concat(r.name, " ").concat(a.name)
         });
@@ -323,12 +307,12 @@ var fetchTrackedEntityAttributes = function fetchTrackedEntityAttributes(_ref8) 
 var getEventDataItems =
 /*#__PURE__*/
 function () {
-  var _ref9 = _asyncToGenerator(
+  var _ref9 = (0, _asyncToGenerator2.default)(
   /*#__PURE__*/
-  regeneratorRuntime.mark(function _callee(d2, queryParams) {
+  _regenerator.default.mark(function _callee(d2, queryParams) {
     var _ref10, _ref11, dataElementsObj, attributes, filterInvalidTypes;
 
-    return regeneratorRuntime.wrap(function _callee$(_context) {
+    return _regenerator.default.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
@@ -337,7 +321,7 @@ function () {
 
           case 2:
             _ref10 = _context.sent;
-            _ref11 = _slicedToArray(_ref10, 2);
+            _ref11 = (0, _slicedToArray2.default)(_ref10, 2);
             dataElementsObj = _ref11[0];
             attributes = _ref11[1];
 
@@ -345,8 +329,8 @@ function () {
               return Boolean(_dataTypes.CHART_AGGREGATE_AGGREGATABLE_TYPES.includes(item.valueType));
             };
 
-            return _context.abrupt("return", _objectSpread({}, dataElementsObj, {
-              dimensionItems: (0, _sortBy.default)([].concat(_toConsumableArray(dataElementsObj.dimensionItems), _toConsumableArray(attributes)).filter(filterInvalidTypes), 'name')
+            return _context.abrupt("return", (0, _objectSpread2.default)({}, dataElementsObj, {
+              dimensionItems: (0, _sortBy.default)([].concat((0, _toConsumableArray2.default)(dataElementsObj.dimensionItems), (0, _toConsumableArray2.default)(attributes)).filter(filterInvalidTypes), 'name')
             }));
 
           case 8:

@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -20,8 +22,6 @@ var _d2I18n = _interopRequireDefault(require("@dhis2/d2-i18n"));
 var _dataTypes = require("../../modules/dataTypes");
 
 var _DataTypesSelector = require("./styles/DataTypesSelector.style");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var DataTypes = function DataTypes(_ref) {
   var currentDataType = _ref.currentDataType,
