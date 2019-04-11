@@ -24,7 +24,7 @@ export class PeriodDimension extends Component {
       }, []);
       this.props.onSelect({
         dimensionType: peId,
-        value: itemsToAdd
+        value: [...this.props.selectedPeriods, ...itemsToAdd]
       });
     });
 

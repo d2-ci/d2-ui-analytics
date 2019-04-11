@@ -49,7 +49,7 @@ export class DynamicDimension extends Component {
       const itemsToAdd = this.state.items.filter(di => selectedIds.includes(di.id));
       this.props.onSelect({
         dimensionType: this.props.dialogId,
-        value: itemsToAdd
+        value: [...this.props.selectedItems.filter(item => !selectedIds.include(item.id)), ...itemsToAdd]
       });
     });
 
@@ -64,7 +64,7 @@ export class DynamicDimension extends Component {
       });
     });
 
-    _defineProperty(this, "getUnselectedItems", () => this.state.items.filter(item => !this.props.selectedItems.includes(item.id)));
+    _defineProperty(this, "getUnselectedItems", () => this.state.items.filter(item => !this.props.selectedItems.find(i => i.id === item.id)));
 
     _defineProperty(this, "setUiItems", items => this.props.onReorder({
       dimensionType: this.props.dialogId,
