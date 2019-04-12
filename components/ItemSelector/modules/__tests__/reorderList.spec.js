@@ -98,5 +98,32 @@ describe('reorderList', function () {
       var expected = ['1', '3', '4', '2', '6', '5'];
       expect(result).toEqual(expected);
     });
+    it('moves first three items to 2nd position', function () {
+      props.highlightedItemIds = [items[0].id, items[1].id, items[2].id];
+      props.draggableId = items[1].id;
+      props.sourceIndex = 0;
+      props.destinationIndex = 4;
+      var result = (0, _reorderList.reorderList)(props);
+      var expected = ['4', '1', '2', '3', '5', '6'];
+      expect(result).toEqual(expected);
+    });
+    it('moves first four items to 2nd position', function () {
+      props.highlightedItemIds = [items[0].id, items[1].id, items[2].id, items[3].id];
+      props.draggableId = items[1].id;
+      props.sourceIndex = 0;
+      props.destinationIndex = 5;
+      var result = (0, _reorderList.reorderList)(props);
+      var expected = ['5', '1', '2', '3', '4', '6'];
+      expect(result).toEqual(expected);
+    });
+    it('moves last three items to 1st position', function () {
+      props.highlightedItemIds = [items[3].id, items[4].id, items[5].id];
+      props.draggableId = items[4].id;
+      props.sourceIndex = 4;
+      props.destinationIndex = 0;
+      var result = (0, _reorderList.reorderList)(props);
+      var expected = ['4', '5', '6', '1', '2', '3'];
+      expect(result).toEqual(expected);
+    });
   });
 });

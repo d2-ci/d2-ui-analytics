@@ -27,16 +27,10 @@ var reorderList = function reorderList(_ref) {
         }).indexOf(highlightedItemId)
       };
     }), 'idx');
-    var newDestinationIndex = destinationIndex;
-
-    if (newDestinationIndex < items.length && newDestinationIndex > 1) {
-      indexedItemsToMove.forEach(function (indexed) {
-        if (indexed.idx < newDestinationIndex) {
-          --newDestinationIndex;
-        }
-      });
-    }
-
+    var highlightedAboveDestination = indexedItemsToMove.filter(function (item) {
+      return item.idx < destinationIndex;
+    });
+    var newDestinationIndex = destinationIndex - highlightedAboveDestination.length;
     indexedItemsToMove.forEach(function (indexed) {
       var idx = list.indexOf(indexed.item);
       list.splice(idx, 1);
