@@ -26,8 +26,11 @@ var toggler = function toggler(id, isCtrlPressed, isShiftPressed, index, lastCli
     newIndex = newArr.newIndex;
   }
 
+  var orderedIds = items.filter(function (item) {
+    return ids.includes(item);
+  });
   return {
-    ids: ids,
+    ids: orderedIds,
     lastClickedIndex: newIndex
   };
 };

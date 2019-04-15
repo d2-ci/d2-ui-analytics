@@ -56,6 +56,10 @@ describe('using the toggler ', function () {
       highlightedIds = ['ones', 'stuff', 'here'];
       items = ['ones', 'some', 'id', 'strings', 'stuff', 'here', 'as', 'well'];
     });
+    it('should return the highlighted ids in the same order as original item list', function () {
+      var actual = (0, _toggler.toggler)('id', false, true, 2, 0, ['ones'], items);
+      expect(actual.ids).toEqual(['ones', 'some', 'id']);
+    });
     it('should not update the lastClickedIndex', function () {
       var expectedResult = {
         ids: items,
@@ -66,7 +70,7 @@ describe('using the toggler ', function () {
     });
     it('should keep the highlighted ids and not add duplicate items', function () {
       var expectedResult = {
-        ids: ['some', 'ones', 'stuff', 'here'],
+        ids: ['ones', 'some', 'stuff', 'here'],
         lastClickedIndex: lastClickedIndex
       };
       var actualResult = (0, _toggler.toggler)(id, isCtrlPressed, isShiftPressed, index, lastClickedIndex, highlightedIds, items);
@@ -74,7 +78,7 @@ describe('using the toggler ', function () {
     });
     it('should add items from lastClickedIndex to current index into the array', function () {
       var expectedResult = {
-        ids: ['some', 'ones', 'stuff', 'here'],
+        ids: ['ones', 'some', 'stuff', 'here'],
         lastClickedIndex: lastClickedIndex
       };
       var actualResult = (0, _toggler.toggler)(id, isCtrlPressed, isShiftPressed, index, lastClickedIndex, highlightedIds, items);
@@ -102,7 +106,7 @@ describe('using the toggler ', function () {
     });
     it('should be able to add one item and update the lastClickedIndex', function () {
       var expectedResult = {
-        ids: highlightedIds.concat(id),
+        ids: ['ones', 'stuff', 'here'],
         lastClickedIndex: index
       };
       var actualResult = (0, _toggler.toggler)(id, isCtrlPressed, isShiftPressed, index, lastClickedIndex, highlightedIds, items);
