@@ -30,7 +30,8 @@ var styles = {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    paddingLeft: '8px'
+    paddingLeft: '8px',
+    cursor: 'pointer'
   }
 };
 exports.styles = styles;
