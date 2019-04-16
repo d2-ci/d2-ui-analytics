@@ -9,6 +9,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = exports.DataDimension = void 0;
 
+var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toConsumableArray"));
+
 var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
 
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
@@ -38,8 +40,6 @@ var _DialogContent = _interopRequireDefault(require("@material-ui/core/DialogCon
 var _d2I18n = _interopRequireDefault(require("@dhis2/d2-i18n"));
 
 var _debounce = _interopRequireDefault(require("lodash/debounce"));
-
-var _keyBy = _interopRequireDefault(require("lodash/keyBy"));
 
 var _isEqual = _interopRequireDefault(require("lodash/isEqual"));
 
@@ -320,13 +320,15 @@ function (_Component) {
       })), 300));
     });
     (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "selectDataDimensions", function (selectedIds) {
-      var itemsToAdd = (0, _keyBy.default)(_this.state.items.filter(function (di) {
+      var itemsToAdd = _this.state.items.filter(function (di) {
         return selectedIds.includes(di.id);
-      }), 'id');
+      });
 
       _this.props.onSelect({
         dimensionType: dxId,
-        value: itemsToAdd
+        value: [].concat((0, _toConsumableArray2.default)(_this.props.selectedDimensions.filter(function (item) {
+          return !selectedIds.includes(item.id);
+        })), (0, _toConsumableArray2.default)(itemsToAdd))
       });
     });
     (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "deselectDataDimensions", function (ids) {
