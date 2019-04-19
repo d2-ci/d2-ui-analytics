@@ -1,0 +1,1050 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The SelectedItems component list with items matches the snapshot with list has items 1`] = `
+<SelectedItems
+  items={
+    Array [
+      Object {
+        "id": "rb",
+        "name": "rainbow",
+      },
+      Object {
+        "id": "rr",
+        "name": "rarity",
+      },
+    ]
+  }
+  onDeselect={[MockFunction]}
+  onReorder={[MockFunction]}
+>
+  <Subtitle>
+    <div
+      className="subtitle-container"
+    >
+      <span
+        className="subtitle-text"
+      >
+        Selected Data
+      </span>
+      <style />
+    </div>
+  </Subtitle>
+  <DragDropContext
+    onDragEnd={[Function]}
+    onDragStart={[Function]}
+  >
+    <ErrorBoundary
+      onError={[Function]}
+    >
+      <Connect(Droppable)
+        direction="vertical"
+        droppableId="selected-items-droppable"
+        ignoreContainerClipping={false}
+        isCombineEnabled={false}
+        isDropDisabled={false}
+        type="DEFAULT"
+      >
+        <Droppable
+          direction="vertical"
+          droppableId="selected-items-droppable"
+          ignoreContainerClipping={false}
+          isCombineEnabled={false}
+          isDropDisabled={false}
+          placeholder={null}
+          shouldAnimatePlaceholder={true}
+          snapshot={
+            Object {
+              "draggingFromThisWith": null,
+              "draggingOverWith": null,
+              "isDraggingOver": false,
+            }
+          }
+          type="DEFAULT"
+          updateViewportMaxScroll={[Function]}
+        >
+          <DroppableDimensionPublisher
+            direction="vertical"
+            droppableId="selected-items-droppable"
+            getDroppableRef={[Function]}
+            getPlaceholderRef={[Function]}
+            ignoreContainerClipping={false}
+            isCombineEnabled={false}
+            isDropDisabled={false}
+            type="DEFAULT"
+          >
+            <ItemsList
+              data-react-beautiful-dnd-droppable="1"
+              innerRef={[Function]}
+            >
+              <ul
+                className="selected-list"
+              >
+                <Connect(Draggable)
+                  disableInteractiveElementBlocking={false}
+                  draggableId="rb"
+                  index={0}
+                  isDragDisabled={false}
+                  key="rb"
+                  shouldRespectForceTouch={true}
+                >
+                  <Draggable
+                    disableInteractiveElementBlocking={false}
+                    draggableId="rb"
+                    drop={[Function]}
+                    dropAnimationFinished={[Function]}
+                    index={0}
+                    isDragDisabled={false}
+                    lift={[Function]}
+                    mapped={
+                      Object {
+                        "combineTargetFor": null,
+                        "offset": Object {
+                          "x": 0,
+                          "y": 0,
+                        },
+                        "shouldAnimateDisplacement": true,
+                        "snapshot": Object {
+                          "combineTargetFor": null,
+                          "combineWith": null,
+                          "draggingOver": null,
+                          "dropAnimation": null,
+                          "isDragging": false,
+                          "isDropAnimating": false,
+                          "mode": null,
+                        },
+                        "type": "SECONDARY",
+                      }
+                    }
+                    move={[Function]}
+                    moveByWindowScroll={[Function]}
+                    moveDown={[Function]}
+                    moveLeft={[Function]}
+                    moveRight={[Function]}
+                    moveUp={[Function]}
+                    shouldRespectForceTouch={true}
+                  >
+                    <DraggableDimensionPublisher
+                      draggableId="rb"
+                      droppableId="selected-items-droppable"
+                      getDraggableRef={[Function]}
+                      index={0}
+                      key="rb"
+                      type="DEFAULT"
+                    >
+                      <DragHandle
+                        callbacks={
+                          Object {
+                            "onCancel": [Function],
+                            "onDrop": [Function],
+                            "onLift": [Function],
+                            "onMove": [Function],
+                            "onMoveDown": [Function],
+                            "onMoveLeft": [Function],
+                            "onMoveRight": [Function],
+                            "onMoveUp": [Function],
+                            "onWindowScroll": [Function],
+                          }
+                        }
+                        canDragInteractiveElements={false}
+                        draggableId="rb"
+                        getDraggableRef={[Function]}
+                        getShouldRespectForceTouch={[Function]}
+                        isDragging={false}
+                        isDropAnimating={false}
+                        isEnabled={true}
+                      >
+                        <li
+                          aria-roledescription="Draggable item. Press space bar to lift"
+                          className="selected-list-item"
+                          data-react-beautiful-dnd-drag-handle="1"
+                          data-react-beautiful-dnd-draggable="1"
+                          draggable={false}
+                          id="rb"
+                          onBlur={[Function]}
+                          onDoubleClick={[Function]}
+                          onDragStart={[Function]}
+                          onFocus={[Function]}
+                          onKeyDown={[Function]}
+                          onMouseDown={[Function]}
+                          onTouchStart={[Function]}
+                          onTransitionEnd={null}
+                          style={
+                            Object {
+                              "transform": null,
+                              "transition": null,
+                            }
+                          }
+                          tabIndex={0}
+                        >
+                          <Item
+                            ghost={false}
+                            highlighted={false}
+                            id="rb"
+                            index={0}
+                            name="rainbow"
+                            onClick={[Function]}
+                            onRemoveItem={[Function]}
+                          >
+                            <div
+                              className="item selected-item"
+                              data-test="dimension-item-rb"
+                              onClick={[Function]}
+                            >
+                              <ItemIcon
+                                backgroundColor="#00796B"
+                              >
+                                <div>
+                                  <style>
+                                    
+                div {
+                    background-color: #00796B;
+                    min-height: 6px;
+                    min-width: 6px;
+                    margin: 0px 5px;
+                }
+            
+                                  </style>
+                                </div>
+                              </ItemIcon>
+                              <span
+                                className="item-label"
+                              >
+                                rainbow
+                              </span>
+                              <DeselectIconButton
+                                fill="#00796B"
+                                onClick={[Function]}
+                              >
+                                <button
+                                  className="deselect-icon-button"
+                                  onClick={[Function]}
+                                >
+                                  <span>
+                                    <pure(CloseIcon)
+                                      style={
+                                        Object {
+                                          "fill": "#00796B",
+                                          "height": "13px",
+                                          "width": "10px",
+                                        }
+                                      }
+                                    >
+                                      <CloseIcon
+                                        style={
+                                          Object {
+                                            "fill": "#00796B",
+                                            "height": "13px",
+                                            "width": "10px",
+                                          }
+                                        }
+                                      >
+                                        <WithStyles(SvgIcon)
+                                          style={
+                                            Object {
+                                              "fill": "#00796B",
+                                              "height": "13px",
+                                              "width": "10px",
+                                            }
+                                          }
+                                        >
+                                          <SvgIcon
+                                            classes={
+                                              Object {
+                                                "colorAction": "MuiSvgIcon-colorAction-33",
+                                                "colorDisabled": "MuiSvgIcon-colorDisabled-35",
+                                                "colorError": "MuiSvgIcon-colorError-34",
+                                                "colorPrimary": "MuiSvgIcon-colorPrimary-31",
+                                                "colorSecondary": "MuiSvgIcon-colorSecondary-32",
+                                                "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-36",
+                                                "fontSizeLarge": "MuiSvgIcon-fontSizeLarge-38",
+                                                "fontSizeSmall": "MuiSvgIcon-fontSizeSmall-37",
+                                                "root": "MuiSvgIcon-root-30",
+                                              }
+                                            }
+                                            color="inherit"
+                                            component="svg"
+                                            fontSize="default"
+                                            style={
+                                              Object {
+                                                "fill": "#00796B",
+                                                "height": "13px",
+                                                "width": "10px",
+                                              }
+                                            }
+                                            viewBox="0 0 24 24"
+                                          >
+                                            <svg
+                                              aria-hidden="true"
+                                              className="MuiSvgIcon-root-30"
+                                              focusable="false"
+                                              role="presentation"
+                                              style={
+                                                Object {
+                                                  "fill": "#00796B",
+                                                  "height": "13px",
+                                                  "width": "10px",
+                                                }
+                                              }
+                                              viewBox="0 0 24 24"
+                                            >
+                                              <path
+                                                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                              />
+                                              <path
+                                                d="M0 0h24v24H0z"
+                                                fill="none"
+                                              />
+                                            </svg>
+                                          </SvgIcon>
+                                        </WithStyles(SvgIcon)>
+                                      </CloseIcon>
+                                    </pure(CloseIcon)>
+                                  </span>
+                                  <style />
+                                </button>
+                              </DeselectIconButton>
+                              <style />
+                            </div>
+                          </Item>
+                          <style />
+                        </li>
+                      </DragHandle>
+                    </DraggableDimensionPublisher>
+                  </Draggable>
+                </Connect(Draggable)>
+                <Connect(Draggable)
+                  disableInteractiveElementBlocking={false}
+                  draggableId="rr"
+                  index={1}
+                  isDragDisabled={false}
+                  key="rr"
+                  shouldRespectForceTouch={true}
+                >
+                  <Draggable
+                    disableInteractiveElementBlocking={false}
+                    draggableId="rr"
+                    drop={[Function]}
+                    dropAnimationFinished={[Function]}
+                    index={1}
+                    isDragDisabled={false}
+                    lift={[Function]}
+                    mapped={
+                      Object {
+                        "combineTargetFor": null,
+                        "offset": Object {
+                          "x": 0,
+                          "y": 0,
+                        },
+                        "shouldAnimateDisplacement": true,
+                        "snapshot": Object {
+                          "combineTargetFor": null,
+                          "combineWith": null,
+                          "draggingOver": null,
+                          "dropAnimation": null,
+                          "isDragging": false,
+                          "isDropAnimating": false,
+                          "mode": null,
+                        },
+                        "type": "SECONDARY",
+                      }
+                    }
+                    move={[Function]}
+                    moveByWindowScroll={[Function]}
+                    moveDown={[Function]}
+                    moveLeft={[Function]}
+                    moveRight={[Function]}
+                    moveUp={[Function]}
+                    shouldRespectForceTouch={true}
+                  >
+                    <DraggableDimensionPublisher
+                      draggableId="rr"
+                      droppableId="selected-items-droppable"
+                      getDraggableRef={[Function]}
+                      index={1}
+                      key="rr"
+                      type="DEFAULT"
+                    >
+                      <DragHandle
+                        callbacks={
+                          Object {
+                            "onCancel": [Function],
+                            "onDrop": [Function],
+                            "onLift": [Function],
+                            "onMove": [Function],
+                            "onMoveDown": [Function],
+                            "onMoveLeft": [Function],
+                            "onMoveRight": [Function],
+                            "onMoveUp": [Function],
+                            "onWindowScroll": [Function],
+                          }
+                        }
+                        canDragInteractiveElements={false}
+                        draggableId="rr"
+                        getDraggableRef={[Function]}
+                        getShouldRespectForceTouch={[Function]}
+                        isDragging={false}
+                        isDropAnimating={false}
+                        isEnabled={true}
+                      >
+                        <li
+                          aria-roledescription="Draggable item. Press space bar to lift"
+                          className="selected-list-item"
+                          data-react-beautiful-dnd-drag-handle="1"
+                          data-react-beautiful-dnd-draggable="1"
+                          draggable={false}
+                          id="rr"
+                          onBlur={[Function]}
+                          onDoubleClick={[Function]}
+                          onDragStart={[Function]}
+                          onFocus={[Function]}
+                          onKeyDown={[Function]}
+                          onMouseDown={[Function]}
+                          onTouchStart={[Function]}
+                          onTransitionEnd={null}
+                          style={
+                            Object {
+                              "transform": null,
+                              "transition": null,
+                            }
+                          }
+                          tabIndex={0}
+                        >
+                          <Item
+                            ghost={false}
+                            highlighted={false}
+                            id="rr"
+                            index={1}
+                            name="rarity"
+                            onClick={[Function]}
+                            onRemoveItem={[Function]}
+                          >
+                            <div
+                              className="item selected-item"
+                              data-test="dimension-item-rr"
+                              onClick={[Function]}
+                            >
+                              <ItemIcon
+                                backgroundColor="#00796B"
+                              >
+                                <div>
+                                  <style>
+                                    
+                div {
+                    background-color: #00796B;
+                    min-height: 6px;
+                    min-width: 6px;
+                    margin: 0px 5px;
+                }
+            
+                                  </style>
+                                </div>
+                              </ItemIcon>
+                              <span
+                                className="item-label"
+                              >
+                                rarity
+                              </span>
+                              <DeselectIconButton
+                                fill="#00796B"
+                                onClick={[Function]}
+                              >
+                                <button
+                                  className="deselect-icon-button"
+                                  onClick={[Function]}
+                                >
+                                  <span>
+                                    <pure(CloseIcon)
+                                      style={
+                                        Object {
+                                          "fill": "#00796B",
+                                          "height": "13px",
+                                          "width": "10px",
+                                        }
+                                      }
+                                    >
+                                      <CloseIcon
+                                        style={
+                                          Object {
+                                            "fill": "#00796B",
+                                            "height": "13px",
+                                            "width": "10px",
+                                          }
+                                        }
+                                      >
+                                        <WithStyles(SvgIcon)
+                                          style={
+                                            Object {
+                                              "fill": "#00796B",
+                                              "height": "13px",
+                                              "width": "10px",
+                                            }
+                                          }
+                                        >
+                                          <SvgIcon
+                                            classes={
+                                              Object {
+                                                "colorAction": "MuiSvgIcon-colorAction-33",
+                                                "colorDisabled": "MuiSvgIcon-colorDisabled-35",
+                                                "colorError": "MuiSvgIcon-colorError-34",
+                                                "colorPrimary": "MuiSvgIcon-colorPrimary-31",
+                                                "colorSecondary": "MuiSvgIcon-colorSecondary-32",
+                                                "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-36",
+                                                "fontSizeLarge": "MuiSvgIcon-fontSizeLarge-38",
+                                                "fontSizeSmall": "MuiSvgIcon-fontSizeSmall-37",
+                                                "root": "MuiSvgIcon-root-30",
+                                              }
+                                            }
+                                            color="inherit"
+                                            component="svg"
+                                            fontSize="default"
+                                            style={
+                                              Object {
+                                                "fill": "#00796B",
+                                                "height": "13px",
+                                                "width": "10px",
+                                              }
+                                            }
+                                            viewBox="0 0 24 24"
+                                          >
+                                            <svg
+                                              aria-hidden="true"
+                                              className="MuiSvgIcon-root-30"
+                                              focusable="false"
+                                              role="presentation"
+                                              style={
+                                                Object {
+                                                  "fill": "#00796B",
+                                                  "height": "13px",
+                                                  "width": "10px",
+                                                }
+                                              }
+                                              viewBox="0 0 24 24"
+                                            >
+                                              <path
+                                                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                              />
+                                              <path
+                                                d="M0 0h24v24H0z"
+                                                fill="none"
+                                              />
+                                            </svg>
+                                          </SvgIcon>
+                                        </WithStyles(SvgIcon)>
+                                      </CloseIcon>
+                                    </pure(CloseIcon)>
+                                  </span>
+                                  <style />
+                                </button>
+                              </DeselectIconButton>
+                              <style />
+                            </div>
+                          </Item>
+                          <style />
+                        </li>
+                      </DragHandle>
+                    </DraggableDimensionPublisher>
+                  </Draggable>
+                </Connect(Draggable)>
+                <AnimateInOut
+                  on={null}
+                  shouldAnimate={true}
+                />
+                <style />
+              </ul>
+            </ItemsList>
+          </DroppableDimensionPublisher>
+        </Droppable>
+      </Connect(Droppable)>
+    </ErrorBoundary>
+  </DragDropContext>
+  <div
+    className="deselect-all-button"
+  >
+    <WithStyles(Button)
+      onClick={[Function]}
+    >
+      <Button
+        classes={
+          Object {
+            "colorInherit": "MuiButton-colorInherit-22",
+            "contained": "MuiButton-contained-12",
+            "containedPrimary": "MuiButton-containedPrimary-13",
+            "containedSecondary": "MuiButton-containedSecondary-14",
+            "disabled": "MuiButton-disabled-21",
+            "extendedFab": "MuiButton-extendedFab-19",
+            "fab": "MuiButton-fab-18",
+            "flat": "MuiButton-flat-6",
+            "flatPrimary": "MuiButton-flatPrimary-7",
+            "flatSecondary": "MuiButton-flatSecondary-8",
+            "focusVisible": "MuiButton-focusVisible-20",
+            "fullWidth": "MuiButton-fullWidth-26",
+            "label": "MuiButton-label-2",
+            "mini": "MuiButton-mini-23",
+            "outlined": "MuiButton-outlined-9",
+            "outlinedPrimary": "MuiButton-outlinedPrimary-10",
+            "outlinedSecondary": "MuiButton-outlinedSecondary-11",
+            "raised": "MuiButton-raised-15",
+            "raisedPrimary": "MuiButton-raisedPrimary-16",
+            "raisedSecondary": "MuiButton-raisedSecondary-17",
+            "root": "MuiButton-root-1",
+            "sizeLarge": "MuiButton-sizeLarge-25",
+            "sizeSmall": "MuiButton-sizeSmall-24",
+            "text": "MuiButton-text-3",
+            "textPrimary": "MuiButton-textPrimary-4",
+            "textSecondary": "MuiButton-textSecondary-5",
+          }
+        }
+        color="default"
+        component="button"
+        disableFocusRipple={false}
+        disabled={false}
+        fullWidth={false}
+        mini={false}
+        onClick={[Function]}
+        size="medium"
+        type="button"
+        variant="text"
+      >
+        <WithStyles(ButtonBase)
+          className="MuiButton-root-1 MuiButton-text-3 MuiButton-flat-6"
+          component="button"
+          disabled={false}
+          focusRipple={true}
+          focusVisibleClassName="MuiButton-focusVisible-20"
+          onClick={[Function]}
+          type="button"
+        >
+          <ButtonBase
+            centerRipple={false}
+            className="MuiButton-root-1 MuiButton-text-3 MuiButton-flat-6"
+            classes={
+              Object {
+                "disabled": "MuiButtonBase-disabled-28",
+                "focusVisible": "MuiButtonBase-focusVisible-29",
+                "root": "MuiButtonBase-root-27",
+              }
+            }
+            component="button"
+            disableRipple={false}
+            disableTouchRipple={false}
+            disabled={false}
+            focusRipple={true}
+            focusVisibleClassName="MuiButton-focusVisible-20"
+            onClick={[Function]}
+            tabIndex="0"
+            type="button"
+          >
+            <button
+              className="MuiButtonBase-root-27 MuiButton-root-1 MuiButton-text-3 MuiButton-flat-6"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onContextMenu={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex="0"
+              type="button"
+            >
+              <span
+                className="MuiButton-label-2"
+              >
+                Deselect All
+              </span>
+              <NoSsr
+                defer={false}
+                fallback={null}
+              >
+                <WithStyles(TouchRipple)
+                  center={false}
+                  innerRef={[Function]}
+                >
+                  <TouchRipple
+                    center={false}
+                    classes={
+                      Object {
+                        "child": "MuiTouchRipple-child-43",
+                        "childLeaving": "MuiTouchRipple-childLeaving-44",
+                        "childPulsate": "MuiTouchRipple-childPulsate-45",
+                        "ripple": "MuiTouchRipple-ripple-40",
+                        "ripplePulsate": "MuiTouchRipple-ripplePulsate-42",
+                        "rippleVisible": "MuiTouchRipple-rippleVisible-41",
+                        "root": "MuiTouchRipple-root-39",
+                      }
+                    }
+                  >
+                    <TransitionGroup
+                      childFactory={[Function]}
+                      className="MuiTouchRipple-root-39"
+                      component="span"
+                      enter={true}
+                      exit={true}
+                    >
+                      <span
+                        className="MuiTouchRipple-root-39"
+                      />
+                    </TransitionGroup>
+                  </TouchRipple>
+                </WithStyles(TouchRipple)>
+              </NoSsr>
+            </button>
+          </ButtonBase>
+        </WithStyles(ButtonBase)>
+      </Button>
+    </WithStyles(Button)>
+  </div>
+  <div
+    className="deselect-highlighted-button"
+  >
+    <ArrowButton
+      iconType="arrowBack"
+      onClick={[Function]}
+    >
+      <button
+        className="arrow-button"
+        onClick={[Function]}
+      >
+        <span
+          className="arrow-icon"
+        >
+          <pure(ArrowBackIcon)>
+            <ArrowBackIcon>
+              <WithStyles(SvgIcon)>
+                <SvgIcon
+                  classes={
+                    Object {
+                      "colorAction": "MuiSvgIcon-colorAction-33",
+                      "colorDisabled": "MuiSvgIcon-colorDisabled-35",
+                      "colorError": "MuiSvgIcon-colorError-34",
+                      "colorPrimary": "MuiSvgIcon-colorPrimary-31",
+                      "colorSecondary": "MuiSvgIcon-colorSecondary-32",
+                      "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-36",
+                      "fontSizeLarge": "MuiSvgIcon-fontSizeLarge-38",
+                      "fontSizeSmall": "MuiSvgIcon-fontSizeSmall-37",
+                      "root": "MuiSvgIcon-root-30",
+                    }
+                  }
+                  color="inherit"
+                  component="svg"
+                  fontSize="default"
+                  viewBox="0 0 24 24"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root-30"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M0 0h24v24H0z"
+                      fill="none"
+                    />
+                    <path
+                      d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+                    />
+                  </svg>
+                </SvgIcon>
+              </WithStyles(SvgIcon)>
+            </ArrowBackIcon>
+          </pure(ArrowBackIcon)>
+        </span>
+        <style />
+      </button>
+    </ArrowButton>
+  </div>
+  <style />
+</SelectedItems>
+`;
+
+exports[`The SelectedItems component matches the snapshot when list is empty 1`] = `
+<SelectedItems
+  items={Array []}
+  onDeselect={[MockFunction]}
+  onReorder={[MockFunction]}
+>
+  <Subtitle>
+    <div
+      className="subtitle-container"
+    >
+      <span
+        className="subtitle-text"
+      >
+        Selected Data
+      </span>
+      <style />
+    </div>
+  </Subtitle>
+  <DragDropContext
+    onDragEnd={[Function]}
+    onDragStart={[Function]}
+  >
+    <ErrorBoundary
+      onError={[Function]}
+    >
+      <Connect(Droppable)
+        direction="vertical"
+        droppableId="selected-items-droppable"
+        ignoreContainerClipping={false}
+        isCombineEnabled={false}
+        isDropDisabled={false}
+        type="DEFAULT"
+      >
+        <Droppable
+          direction="vertical"
+          droppableId="selected-items-droppable"
+          ignoreContainerClipping={false}
+          isCombineEnabled={false}
+          isDropDisabled={false}
+          placeholder={null}
+          shouldAnimatePlaceholder={true}
+          snapshot={
+            Object {
+              "draggingFromThisWith": null,
+              "draggingOverWith": null,
+              "isDraggingOver": false,
+            }
+          }
+          type="DEFAULT"
+          updateViewportMaxScroll={[Function]}
+        >
+          <DroppableDimensionPublisher
+            direction="vertical"
+            droppableId="selected-items-droppable"
+            getDroppableRef={[Function]}
+            getPlaceholderRef={[Function]}
+            ignoreContainerClipping={false}
+            isCombineEnabled={false}
+            isDropDisabled={false}
+            type="DEFAULT"
+          >
+            <ItemsList
+              data-react-beautiful-dnd-droppable="0"
+              innerRef={[Function]}
+            >
+              <ul
+                className="selected-list"
+              >
+                <AnimateInOut
+                  on={null}
+                  shouldAnimate={true}
+                />
+                <style />
+              </ul>
+            </ItemsList>
+          </DroppableDimensionPublisher>
+        </Droppable>
+      </Connect(Droppable)>
+    </ErrorBoundary>
+  </DragDropContext>
+  <div
+    className="deselect-all-button"
+  >
+    <WithStyles(Button)
+      onClick={[Function]}
+    >
+      <Button
+        classes={
+          Object {
+            "colorInherit": "MuiButton-colorInherit-22",
+            "contained": "MuiButton-contained-12",
+            "containedPrimary": "MuiButton-containedPrimary-13",
+            "containedSecondary": "MuiButton-containedSecondary-14",
+            "disabled": "MuiButton-disabled-21",
+            "extendedFab": "MuiButton-extendedFab-19",
+            "fab": "MuiButton-fab-18",
+            "flat": "MuiButton-flat-6",
+            "flatPrimary": "MuiButton-flatPrimary-7",
+            "flatSecondary": "MuiButton-flatSecondary-8",
+            "focusVisible": "MuiButton-focusVisible-20",
+            "fullWidth": "MuiButton-fullWidth-26",
+            "label": "MuiButton-label-2",
+            "mini": "MuiButton-mini-23",
+            "outlined": "MuiButton-outlined-9",
+            "outlinedPrimary": "MuiButton-outlinedPrimary-10",
+            "outlinedSecondary": "MuiButton-outlinedSecondary-11",
+            "raised": "MuiButton-raised-15",
+            "raisedPrimary": "MuiButton-raisedPrimary-16",
+            "raisedSecondary": "MuiButton-raisedSecondary-17",
+            "root": "MuiButton-root-1",
+            "sizeLarge": "MuiButton-sizeLarge-25",
+            "sizeSmall": "MuiButton-sizeSmall-24",
+            "text": "MuiButton-text-3",
+            "textPrimary": "MuiButton-textPrimary-4",
+            "textSecondary": "MuiButton-textSecondary-5",
+          }
+        }
+        color="default"
+        component="button"
+        disableFocusRipple={false}
+        disabled={false}
+        fullWidth={false}
+        mini={false}
+        onClick={[Function]}
+        size="medium"
+        type="button"
+        variant="text"
+      >
+        <WithStyles(ButtonBase)
+          className="MuiButton-root-1 MuiButton-text-3 MuiButton-flat-6"
+          component="button"
+          disabled={false}
+          focusRipple={true}
+          focusVisibleClassName="MuiButton-focusVisible-20"
+          onClick={[Function]}
+          type="button"
+        >
+          <ButtonBase
+            centerRipple={false}
+            className="MuiButton-root-1 MuiButton-text-3 MuiButton-flat-6"
+            classes={
+              Object {
+                "disabled": "MuiButtonBase-disabled-28",
+                "focusVisible": "MuiButtonBase-focusVisible-29",
+                "root": "MuiButtonBase-root-27",
+              }
+            }
+            component="button"
+            disableRipple={false}
+            disableTouchRipple={false}
+            disabled={false}
+            focusRipple={true}
+            focusVisibleClassName="MuiButton-focusVisible-20"
+            onClick={[Function]}
+            tabIndex="0"
+            type="button"
+          >
+            <button
+              className="MuiButtonBase-root-27 MuiButton-root-1 MuiButton-text-3 MuiButton-flat-6"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onContextMenu={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex="0"
+              type="button"
+            >
+              <span
+                className="MuiButton-label-2"
+              >
+                Deselect All
+              </span>
+              <NoSsr
+                defer={false}
+                fallback={null}
+              >
+                <WithStyles(TouchRipple)
+                  center={false}
+                  innerRef={[Function]}
+                >
+                  <TouchRipple
+                    center={false}
+                    classes={
+                      Object {
+                        "child": "MuiTouchRipple-child-43",
+                        "childLeaving": "MuiTouchRipple-childLeaving-44",
+                        "childPulsate": "MuiTouchRipple-childPulsate-45",
+                        "ripple": "MuiTouchRipple-ripple-40",
+                        "ripplePulsate": "MuiTouchRipple-ripplePulsate-42",
+                        "rippleVisible": "MuiTouchRipple-rippleVisible-41",
+                        "root": "MuiTouchRipple-root-39",
+                      }
+                    }
+                  >
+                    <TransitionGroup
+                      childFactory={[Function]}
+                      className="MuiTouchRipple-root-39"
+                      component="span"
+                      enter={true}
+                      exit={true}
+                    >
+                      <span
+                        className="MuiTouchRipple-root-39"
+                      />
+                    </TransitionGroup>
+                  </TouchRipple>
+                </WithStyles(TouchRipple)>
+              </NoSsr>
+            </button>
+          </ButtonBase>
+        </WithStyles(ButtonBase)>
+      </Button>
+    </WithStyles(Button)>
+  </div>
+  <div
+    className="deselect-highlighted-button"
+  >
+    <ArrowButton
+      iconType="arrowBack"
+      onClick={[Function]}
+    >
+      <button
+        className="arrow-button"
+        onClick={[Function]}
+      >
+        <span
+          className="arrow-icon"
+        >
+          <pure(ArrowBackIcon)>
+            <ArrowBackIcon>
+              <WithStyles(SvgIcon)>
+                <SvgIcon
+                  classes={
+                    Object {
+                      "colorAction": "MuiSvgIcon-colorAction-33",
+                      "colorDisabled": "MuiSvgIcon-colorDisabled-35",
+                      "colorError": "MuiSvgIcon-colorError-34",
+                      "colorPrimary": "MuiSvgIcon-colorPrimary-31",
+                      "colorSecondary": "MuiSvgIcon-colorSecondary-32",
+                      "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-36",
+                      "fontSizeLarge": "MuiSvgIcon-fontSizeLarge-38",
+                      "fontSizeSmall": "MuiSvgIcon-fontSizeSmall-37",
+                      "root": "MuiSvgIcon-root-30",
+                    }
+                  }
+                  color="inherit"
+                  component="svg"
+                  fontSize="default"
+                  viewBox="0 0 24 24"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root-30"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M0 0h24v24H0z"
+                      fill="none"
+                    />
+                    <path
+                      d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+                    />
+                  </svg>
+                </SvgIcon>
+              </WithStyles(SvgIcon)>
+            </ArrowBackIcon>
+          </pure(ArrowBackIcon)>
+        </span>
+        <style />
+      </button>
+    </ArrowButton>
+  </div>
+  <style />
+</SelectedItems>
+`;
